@@ -1,0 +1,219 @@
+/* Reset CSS */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+  background-color: #000;
+  color: #fff;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/*************** Real code begin ************/
+
+/* first block */
+.container {
+  display: grid;
+  height: 100vh;
+  width: 90%;
+  grid-template-areas:
+    "title title"
+    "image aside"
+    "main aside"
+    "footer aside";
+  grid-template-columns: 41.67% 58.33%;
+  grid-template-rows: 11.11% 38.88% 38.88% 11.11%;
+  grid-gap: 0.5em;
+  margin: 0 auto;
+}
+
+.header {
+  grid-area: title;
+}
+
+.blank {
+  grid-area: image;
+  margin-top: 3em;
+  margin-left: 3em;
+  filter: grayscale(100%);
+}
+
+.blank img {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  grid-area: main;
+  padding: 1em;
+  margin-left: 3em;
+  font-size: 1.2em;
+  min-width: fit-content;
+  height: 78vh;
+}
+
+.main h1 {
+  display: inline;
+}
+
+.main h1 + span {
+  float: right;
+  font-size: 1.5em;
+}
+
+.nav-list {
+  grid-area: aside;
+  width: 100%;
+  margin-top: 3em;
+  padding: 1em;
+}
+
+.flex {
+  display: flex;
+  justify-content: right;
+}
+
+.flex > li {
+  flex: 1;
+  display: flex;
+  max-width: 160px;
+  flex-direction: column;
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  border-left: 2px solid #333333;
+  font-size: 1.5em;
+  height: 78vh;
+  position: relative;
+  padding: 0.5em;
+}
+
+.flex > li span + span {
+  vertical-align: bottom;
+  margin-top: 0.5em;
+}
+
+.flex li:last-child {
+  border-right: 2px solid #333333;
+}
+
+.nav-list li .large-text {
+  font-size: 3rem;
+}
+
+.nav-list li .bottom {
+  flex: 1;
+  font-size: 4rem;
+  writing-mode: horizontal-tb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* For the typewriter effect section */
+.typewriter {
+  display: flex;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.typewriter h1 {
+  color: white;
+  font-size: 5em;
+  font-weight: 300;
+}
+
+span.cursor {
+  border-right: 2px solid white;
+  animation: blink 0.6s step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: white;
+  }
+}
+
+/* For the "About" section */
+.About {
+  background-color: #fff;
+  color: #000;
+  height: 100vh;
+  padding: 2em;
+}
+
+.About h1 {
+  font-size: 2em;
+  border-bottom: 3px solid black;
+  text-shadow: 2px 2px 5px grey;
+}
+
+.About .myImage {
+  float: left;
+  margin-right: 1em;
+  padding: 1em;
+  width: 40vw;
+  height: 40vh;
+  border: 2px solid #000;
+}
+
+.About .myImage p {
+  text-align: center;
+}
+
+.About .myImage p + p {
+  font-size: 3em;
+  line-height: 20vh;
+}
+
+.About p {
+  font-size: 1.5em;
+}
+
+/* For the "Skill section */
+.Skill h1 {
+  margin: 0 2em;
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid white;
+}
+
+.Skill .languages {
+  text-align: center;
+}
+
+.Skill .language-icons {
+  padding: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.language-icons img {
+  padding: 1rem;
+  height: 100px;
+  width: 100px;
+}
+
+.language-icons figcaption {
+  font-size: 1.5em;
+  text-align: center;
+}
