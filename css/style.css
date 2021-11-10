@@ -1,3 +1,7 @@
+/* Fonts Import*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
+
 /* Reset CSS */
 a {
   background-color: transparent;
@@ -22,7 +26,7 @@ ol {
   list-style-type: none;
 }
 
-/*************** Real code begin ************/
+/*************** Real code begin **************/
 
 /* first block */
 .container {
@@ -122,17 +126,19 @@ ol {
   right: 0;
 }
 
-/* For the typewriter effect section */
+/* ----------------- TypeWriter Effect section  --------------------*/
 .typewriter {
   display: flex;
+  flex-direction: column;
   background-color: #000;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
+  margin-left: 3em;
 }
 
 .typewriter h1 {
   color: white;
+  font-family: "Roboto", sans-serif;
   font-size: 5em;
   font-weight: 300;
 }
@@ -152,25 +158,38 @@ span.cursor {
   }
 }
 
-/* For the "About" section */
+/* ----------------- "About" section  --------------------*/
 .About {
   background-color: #fff;
   color: #000;
-  height: 100vh;
+  min-height: 100vh;
   padding: 2em;
+  overflow: auto;
 }
 
 .About h1 {
   font-size: 2em;
+  font-family: "Oswald";
   border-bottom: 3px solid black;
   text-shadow: 2px 2px 5px grey;
 }
 
-.About .myImage {
+.About > p > span::first-letter {
+  font-size: 3rem;
+}
+
+.About p > span {
+  display: block;
+  width: 50vw;
   float: left;
+}
+
+.About .myImage {
+  float: right;
   margin-right: 1em;
   padding: 1em;
   width: 40vw;
+  max-width: 370px;
   height: 40vh;
   border: 2px solid #000;
 }
@@ -188,7 +207,12 @@ span.cursor {
   font-size: 1.5em;
 }
 
-/* For the "Skill section */
+@media screen and (max-width: 590px) {
+  .About .myImage {
+    display: none;
+  }
+}
+/* ----------------- "Skill" section  --------------------*/
 .Skill h1 {
   margin: 0 2em;
   font-size: 2em;
@@ -216,4 +240,53 @@ span.cursor {
 .language-icons figcaption {
   font-size: 1.5em;
   text-align: center;
+}
+
+/* ----------------- "Project" section  --------------------*/
+
+.Project {
+  margin: 0 auto;
+  background-color: #fff;
+  color: #000;
+  min-height: 90vh;
+  padding: 2em;
+  overflow: auto;
+}
+
+.Project h1 {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  border-bottom: 3px solid black;
+  text-shadow: 2px 2px 5px grey;
+}
+
+.Project .project-list {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1024px;
+}
+
+.Project .project-item {
+  border: 1px solid #000;
+  flex: 1;
+  margin-right: 1rem;
+}
+.Project .project-item h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Project .project-item img {
+  width: 100%;
+}
+
+.Project .project-item .tag {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: 0.3em 0.5em;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  background: rgb(200, 255, 255);
 }
