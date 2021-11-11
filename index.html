@@ -10,11 +10,7 @@
 </head>
 
 <body>
-    <!-- <section class="container">
-        <header class="header">
-            <p></p>
-        </header>
-
+    <!-- <section class="container modal" id="modal">
         <section class="main">
             <h1>Welcome</h1>
             <span>歡迎</span>
@@ -112,52 +108,65 @@
 
     <!---------------------- Skill Section ------------------------>
     <section class="Skill">
-        <h1>Language</h1>
-        <div class="languages">
-            <figure class="language-icons">
-                <img src="./img/icons/java(color).png" alt="Java logo">
-                <figcaption>Java</figcaption>
-            </figure>
-            <figure class="language-icons">
-                <img src="./img/icons/python(color).png" alt="Python logo">
-                <figcaption>Python</figcaption>
-            </figure>
-            <figure class="language-icons">
-                <img src="./img/icons/js.png" alt="JavaScript logo">
-                <figcaption>JavaScript</figcaption>
-            </figure>
+        <aside>
+            <span>My ToolBox</span>
+        </aside>
+
+        <div class="skill-row">
+            <h1>Language</h1>
+            <hr>
+            <div class="languages">
+                <figure class="language-icons">
+                    <img src="./img/icons/java(color).png" alt="Java logo">
+                    <figcaption>Java</figcaption>
+                </figure>
+                <figure class="language-icons">
+                    <img src="./img/icons/python(color).png" alt="Python logo">
+                    <figcaption>Python</figcaption>
+                </figure>
+                <figure class="language-icons">
+                    <img src="./img/icons/js.png" alt="JavaScript logo">
+                    <figcaption>JavaScript</figcaption>
+                </figure>
+            </div>
         </div>
 
-        <h1>Database</h1>
-        <div class="languages">
-            <figure class="language-icons">
-                <img src="./img/icons/oracle(color).png" alt="Oracle logo">
-                <figcaption>Oracle PL/SQL</figcaption>
-            </figure>
-            <figure class="language-icons">
-                <img src="./img/icons/mysql(color).png" alt="MySQL logo">
-                <figcaption>MySQl</figcaption>
-            </figure>
-            <figure class="language-icons">
-                <img src="./img/icons/mongodb-144.png" alt="MongoDB logo">
-                <figcaption>MongoDB</figcaption>
-            </figure>
+        <div class="skill-row">
+            <h1>Database</h1>
+            <hr>
+            <div class="languages">
+                <figure class="language-icons">
+                    <img src="./img/icons/oracle(color).png" alt="Oracle logo">
+                    <figcaption>Oracle PL/SQL</figcaption>
+                </figure>
+                <figure class="language-icons">
+                    <img src="./img/icons/mysql(color).png" alt="MySQL logo">
+                    <figcaption>MySQl</figcaption>
+                </figure>
+                <figure class="language-icons">
+                    <img src="./img/icons/mongodb-144.png" alt="MongoDB logo">
+                    <figcaption>MongoDB</figcaption>
+                </figure>
+            </div>
         </div>
 
-        <h1>Frameworks</h1>
-        <div class="languages">
-            <figure class="language-icons">
-                <img src="./img/icons/react.png" alt="Oracle logo">
-                <figcaption>ReactJS</figcaption>
-            </figure>
-            <figure class="language-icons">
-                <img src="./img/icons/nodejs-144.png" alt="MySQL logo">
-                <figcaption>NodeJS</figcaption>
-            </figure>
-            <figure class="language-icons">
-                <img src="./img/icons/icons8-django-144.png" alt="MongoDB logo">
-                <figcaption>Django</figcaption>
-            </figure>
+        <div class="skill-row">
+            <h1>Frameworks</h1>
+            <hr>
+            <div class="languages">
+                <figure class="language-icons">
+                    <img src="./img/icons/react.png" alt="Oracle logo">
+                    <figcaption>ReactJS</figcaption>
+                </figure>
+                <figure class="language-icons">
+                    <img src="./img/icons/nodejs-144.png" alt="MySQL logo">
+                    <figcaption>NodeJS</figcaption>
+                </figure>
+                <figure class="language-icons">
+                    <img src="./img/icons/icons8-django-144.png" alt="MongoDB logo">
+                    <figcaption>Django</figcaption>
+                </figure>
+            </div>
         </div>
     </section>
 
@@ -167,26 +176,59 @@
         <div class="project-list">
             <div class="project-item">
                 <h2>Spacestagram</h2>
-                <img src="./img/project-space.jpg" alt="An image for the project Spacestagram">
+                <div class="item">
+                    <img src="./img/project-space.jpg" alt="An image for the project Spacestagram">
+                    <div class="item-back">
+                        <p>
+                            A React project that display photos from NASA MARS Rover.
+                            Users can like the photos and share them with friends.
+                        </p>
+                        <a href="https://nirvanaphx.github.io/spacetagram/">Demo</a>
+                        <a href="https://github.com/NirvanaPhX/spacetagram">Code</a>
+                    </div>
+                </div>
                 <span class="tag">React</span>
-                <p></p>
+                <span class="tag">AXIOS</span>
             </div>
 
             <div class="project-item">
                 <h2>Currency Converter</h2>
-                <img src="./img/project-currency.jpg" alt="An image for the project Currency Converter">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
+                <div class="item">
+                    <img src="./img/project-currency.jpg" alt="An image for the project Currency Converter">
+                    <div class="item-back">
+                        <p>
+                            This app allows users to convert between the listed currencies.
+                            The conversion rate is obtained every hour from a third-party API.
+                        </p>
+                        <a href="">Demo</a>
+                        <a href="">Code</a>
+                    </div>
+                </div>
+                <span class="tag">HTML/CSS</span>
                 <span class="tag">JavaScript</span>
+                <span class="tag">JQuery</span>
+                <span class="tag">AJAX</span>
                 <p class="description"></p>
             </div>
 
             <div class="project-item">
                 <h2>Car Rental Website</h2>
-                <img src="./img/project-car.jpg" alt="An image for the project Car Rental Website">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
+                <div class="item">
+                    <img src="./img/project-car.jpg" alt="An image for the project Car Rental Website">
+                    <div class="item-back">
+                        <p>
+                            This app allows users to search for clients from a JSON file, display the client's
+                            information.
+                            Then, it will calculate the total rental fees based on selections.
+                        </p>
+                        <a href="">Demo</a>
+                        <a href="">Code</a>
+                    </div>
+                </div>
+                <span class="tag">HTML/CSS</span>
                 <span class="tag">JavaScript</span>
+                <span class="tag">JQuery</span>
+                <span class="tag">AJAX</span>
                 <p></p>
             </div>
         </div>
