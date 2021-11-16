@@ -317,6 +317,13 @@ span.cursor {
   top: 0;
 }
 
+.Project .project-item .item .item-back .button-group {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 80%;
+}
+
 .Project .project-item .item .item-back a {
   display: block;
   text-align: center;
@@ -331,6 +338,7 @@ span.cursor {
   color: #369;
   background-color: ivory;
 }
+
 .Project .project-item .item:hover .item-back {
   display: block;
 }
