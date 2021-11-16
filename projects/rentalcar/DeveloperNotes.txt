@@ -1,0 +1,5 @@
+Resouce of the font:
+https://www.fontspace.com/category/logo
+
+How to use OTF font using @font-face:
+https://stackoverflow.com/questions/3245141/using-otf-fonts-on-web-browsers

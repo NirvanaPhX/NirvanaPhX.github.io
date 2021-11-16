@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+
+.container {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+@font-face {
+  font-family: AquireBold;
+  src: url("./font/AquireBold-8Ma60.otf") format("opentype");
+}
+
+body {
+  background-image: url("./img/car.jpg");
+}
+
+header > p {
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 250%;
+  font-family: AquireBold;
+  border-bottom: 3px solid black;
+  background-image: linear-gradient(
+    180deg,
+    black 0%,
+    rgba(42, 121, 240, 0.829) 60%,
+    transparent 90%,
+    black 100%
+  );
+}
+
+#search {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 2rem;
+  margin: 2rem;
+  position: relative;
+  opacity: 0.8;
+  background: linear-gradient(45deg, white, transparent);
+}
+
+#search > label {
+  position: absolute;
+  font-size: 1.2rem;
+  top: -11px;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, rgb(238, 185, 39), white);
+  box-shadow: 0px 0px 5px black;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+}
+
+form {
+  border: 2px solid black;
+  padding: 2rem;
+  margin: 2rem;
+  position: relative;
+  height: 250px;
+  border-radius: 5px;
+  opacity: 0.3;
+  background: linear-gradient(45deg, white, transparent);
+  font-family: "Orelega One", cursive;
+}
+
+form #form_title {
+  font-size: 1.2rem;
+  position: absolute;
+  top: -10px;
+  background: linear-gradient(45deg, rgb(238, 185, 39), white);
+  box-shadow: 0px 0px 5px black;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.borderlook,
+.form-control-checkbox {
+  padding: 1rem;
+  border: 2px solid black;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.borderlook > label,
+.form-control-checkbox > :first-child {
+  position: relative;
+  top: -26px;
+  background: linear-gradient(45deg, rgb(238, 185, 39), white);
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#form_title,
+#search > label {
+  font-family: "Zen Dots", cursive;
+}
+
+div.card {
+  display: block;
+  border-radius: 3px;
+  box-shadow: 2px 2px 12px darkslategrey;
+  padding: 10px;
+  margin: 5px;
+  width: fit-content;
+  background: radial-gradient(circle, white, wheat, grey);
+  box-shadow: 3px 3px 6px wheat;
+}
+div.card:hover {
+  background: radial-gradient(circle, grey, white, wheat);
+  color: black;
+}
+.card-match {
+  background-color: rgba(34, 139, 34, 0.602);
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+}
+.card-field {
+  /* Lets us a flex box */
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-field label {
+  width: fit-content;
+}
+
+#displayResult {
+  display: flex;
+  flex-wrap: wrap;
+  /* background: conic-gradient(rgb(106, 203, 241), white, rgb(106, 203, 241), white); */
+  margin-top: 1rem;
+}
+
+#bill {
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 5px;
+  background: conic-gradient(wheat, white, wheat, white, wheat);
+  opacity: 0.9;
+  font-family: "Pridi", serif;
+}
+
+.btn button {
+  padding: 0.5rem 1rem;
+  width: 100px;
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.btn button:hover {
+  background: black;
+  color: white;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}

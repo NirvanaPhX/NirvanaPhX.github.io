@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Details</title>
+
+    <link rel="stylesheet" href="rental.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Pridi:wght@300&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./mustache.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo l">DB</div>
+        <p>Dodgy Brakes Care Rental</p>
+        <div id="time"></div>
+    </header>
+
+    <div class="container">
+        <div id="search">
+            <label for="searchClient">Search Client</label>
+            <input type="text" id="searchClient" autofocus>
+        </div>
+
+        <div class="display">
+
+        </div>
+
+        <form class="hidden" id="clientForm" action="javascript:void(0);" method="get">
+            <div id="form_title">Rental Form</div>
+
+            <div class="l">
+                <div class="inputfield form-control">
+                    <label for="fname" class="required">First Name: </label>
+                    <input type="text" name="fname" id="fname" maxlength=25 pattern="[a-zA-Z-\s]{0,25}"
+                        required disabled>
+                </div><br>
+
+                <div class="inputfield form-control">
+                    <label for="lname" class="required">Last Name: </label>
+                    <input type="text" name="lname" id="lname" maxlength=25 pattern="[a-zA-Z-\s]{0,25}"
+                        placeholder="Enter your first name" required disabled>
+                </div><br>
+
+                <div class="inputfield form-control">
+                    <label for="address" class="required">Address: </label>
+                    <input type="text" name="address" id="address" data-helpMsg="Please enter your addresss"
+                        placeholder="Please enter your address" title="Maximum 100 characters allowed" maxlength=100
+                        required disabled>
+                </div><br>
+
+                <div class="inputfield form-control">
+                    <label for="state_prov" class="required">State/Prov</label>
+                    <input type="text" name="state_prov" id="state_prov"
+                         maxlength=20 placeholder="" required disabled>
+                </div><br>
+
+                <div class="inputfield form-control">
+                    <label for="tel" class="required">Phone Number: </label>
+                    <input type="tel" name="tel" id="tel"
+                        pattern="[0-9]{0,1}[ -]{0,1}[\(]{0,1}[0-9]{3}[\).]{0,1}[ \-.]{0,1}[0-9]{3}[ \-.]{0,1}[0-9]{4}"
+                        placeholder="ex: 000-000-0000" required disabled>
+                </div><br>
+
+                <div class="inputfield form-control">
+                    <label for="email" class="required">Email: </label>
+                    <input type="email" name="email" id="email" 
+                        pattern="[a-zA-Z0-9]{1,}[@]{1}[a-zA-Z0-9]{1,}[.]{1}[a-zA-Z]{1,}"
+                        placeholder="example@domain.com" required disabled>
+                </div><br>
+
+                <div class="inputfield form-control">
+                    <label for="length">Rental Length: </label>
+                    <input type="number" name="length" id="length" step=1 min=0 max=30 required disabled>
+                </div>
+            </div>
+
+            <div class="r box">
+                <div class="borderlook">
+                    <label>Choose your Vehicle Type: </label><br>
+                    <select name="vehicleType" id="vehicleType" disabled required>
+                        <option value="">--Please select an option--</option>
+                        <option value="compact">Compact $15/day</option>
+                        <option value="midSize">Mid-size $20/day</option>
+                        <option value="luxury">Luxury $35/day</option>
+                        <option value="van">Van/Truck $40/day</option>
+                    </select>
+                </div>
+
+                <div class="form-control-checkbox">
+                    <label class="checkboxtitle" id="extra">Options:</label><br><br>
+                    <input type="checkbox" name="options" id="rack" value='rack' disabled>
+                    <label for="options">Roof/Bicycle Rack ............................. $5/day</label><br>
+                    <input type="checkbox" name="options" id="gps" value='gps' disabled>
+                    <label for="options">GPS extra ................................................ $10</label><br>
+                    <input type="checkbox" name="options" id="childSeat" value='childSeat' disabled>
+                    <label for="options">Child Seat ................................................ Free</label><br>
+                </div>
+
+                <div class="btn r">
+                    <button value="submit" type="submit" id="submitbtn">submit</button>
+                    <button type="reset" value="clear" id="clear">clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="displayResult">
+
+    </div>
+
+    <template id="tpl">
+        <div class="card" id={{id}}>
+            <div class="card-match">
+                <label><strong>Customer ID: {{id}} </strong></label>
+            </div>
+            <div class="card-field">
+                <label><strong>Full Name: </strong>{{first_name}} {{last_name}}</label>
+            </div>
+            <div class="card-field">
+                <label><strong>Email: </strong>{{email}}</label>
+            </div>
+            <div class="card-field">
+                <label><strong>Address: </strong>{{address}}</label>
+            </div>
+            <div class="card-field">
+                <label><strong>Phone: </strong>{{phone}}</label>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>
