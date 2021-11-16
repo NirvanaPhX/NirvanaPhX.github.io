@@ -1,0 +1,77 @@
+/* Selectors in this group are used to create a pop-up message the points to a specific
+  <input> field on the screen in order to help the user with instructions, etc.
+  See these web sites on how CSS can draw these types of pop-up messages
+      https://codepen.io/FluidOfInsanity/pen/PRzOEp
+      https://codepen.io/ewayma/pen/iFLeb
+      https://onaircode.com/html-css-arrow-box-examples/
+      https://codeconvey.com/Tutorials/css-message-box-with-arrow/
+*/
+@media all {
+    .helper-popup {
+        background-color:rgb(248, 212, 157);
+        border: 1px solid gray;
+        padding: 5px;
+    }
+  
+    /* This draws the outside rectangle of our pop-up */
+    .msg-icon {
+        display: inline-block;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        max-width: 300px;
+        min-width: 80px;
+        min-height: 38px;
+        position: absolute;
+        top: 22px;
+        left: 130px;
+        background-color: rgba(245, 215, 171, 0.918);
+    }
+    /* This draws the text inside the rectangle, so don't set the background-color */
+      .msg-icon:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 2px solid  #010d41;
+        border-radius: 2px;
+        box-sizing: border-box;
+        clip-path: polygon(0% 105%, 0% 0%, 105% 0%, 105% 105%, 43px 105%, 43px 80%, 21px 80%, 21px 105%);
+      }
+    /* This draws the arrow  pointer */
+    .msg-icon:after {
+        background-color:rgba(245, 215, 171, 0.918);
+        content: "";
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 20px;
+        background: #010d41;
+        top: calc(100% - 1px);
+        left: 20px;
+        box-sizing: border-box;
+        clip-path: polygon(0 0, 0% 100%, 100% 0%, calc(100% - 3px) 0, 1px calc(100% - 3px), 1px 0);
+      }
+  
+    .help-title {
+      font-size: smaller;
+      color: rgba(199, 1, 206, 0.966);
+    }
+    .help-RequiredField {
+      font-size: .75em;
+      color: white  ;
+      background-color: Red;
+      padding: 2px 5px 2px 5px;
+      width: auto;
+      top: -20px;
+    }
+    .hidden {
+        display: none;
+    }
+    #help-message {
+      color:black;
+    }
+  }
+  

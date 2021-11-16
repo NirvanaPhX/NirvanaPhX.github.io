@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Currency Converter</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="FocusJS.css">
+	<script src="money.js"></script>
+	<script src="main.js"></script>
+	<script src="MyFocusJS.js"></script>
+</head>
+<body>
+	<span id="help-message" class="msg-icon hidden"></span>
+	<div class="container">
+		<div class="header">
+			<h1>Currency Converter</h1>
+		</div>
+
+		<div class="block">
+			<div class="subtitle"><h2>From</h2></div>
+			<div class="icon_container">
+				<div class="selection" id="eurfigf">
+					<figure>
+						<img src="img/icons/euflag.svg" alt="Europe Union Flag">
+						<figcaption>&#8364; EUR</figcaption>
+					</figure>
+				</div>
+
+				<div class="selection" id="usafigf">
+					<figure>
+						<img src="img/icons/usflag.svg" alt="USA Flag">
+						<figcaption>&#36; USD</figcaption>
+					</figure>	
+				</div>
+
+				<div class="selection" id="canfigf">
+					<figure>
+						<img src="img/icons/caflag.svg" alt="Canada Flag">
+						<figcaption>&#36; CAD</figcaption>
+					</figure>
+				</div>
+
+				<div class="selection" id="btcfigf">
+					<figure>
+						<img src="img/icons/bitcoin.svg" alt="Bitcoin Icon">
+
+						<figcaption>&#8383; BTC</figcaption>
+					</figure>				</div>
+
+				<div class="selection" id="ethfigf">
+					<figure>
+						<img src="img/icons/ethereum.svg" alt="Etherum Icon">
+
+						<figcaption>&#926; ETH</figcaption>
+					</figure>				</div>
+
+				<div class="displayArea">
+					<h2>Amount:</h2>
+					<input type="number" id="from" min=0>
+					<span id="FromHidden"><h2>CAD</h2></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="block">
+			<div class="subtitle"><h2>To</h2></div>
+			<div class="icon_container">
+				<div class="selection" id="eurfigt">
+					<figure>
+						<img src="img/icons/euflag.svg" alt="Europe Union Flag">
+						<figcaption>&#8364; EUR</figcaption>
+					</figure>
+				</div>
+
+				<div class="selection" id="usafigt">
+					<figure>
+						<img src="img/icons/usflag.svg" alt="USA Flag">
+						<figcaption>&#36; USD</figcaption>
+					</figure>	
+				</div>
+
+				<div class="selection" id="canfigt">
+					<figure>
+						<img src="img/icons/caflag.svg" alt="Canada Flag">
+						<figcaption>&#36; CAD</figcaption>
+					</figure>
+				</div>
+
+				<div class="selection" id="btcfigt">
+					<figure>
+						<img src="img/icons/bitcoin.svg" alt="Bitcoin Icon">
+
+						<figcaption>&#8383; BTC</figcaption>
+					</figure>				</div>
+
+				<div class="selection" id="ethfigt">
+					<figure>
+						<img src="img/icons/ethereum.svg" alt="Etherum Icon">
+
+						<figcaption>&#926; ETH</figcaption>
+					</figure>				</div>
+
+				<div class="displayArea">
+					<h2>Amount:</h2>
+					<div id="to"></div>
+					<span id="ToHidden"><h2>USD</h2></span>
+				</div>
+			</div>
+		</div>
+		<div>
+			<span id="otherinfo"></span>
+			<span id="updaterate"></span>
+			<span id="updatetime"></span>
+		</div>
+	<div class="footer">
+		<div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+	</div>
+</body>
+</html>
