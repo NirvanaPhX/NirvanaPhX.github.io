@@ -356,3 +356,13 @@ span.cursor {
   margin-left: 0.5em;
   background: rgb(200, 255, 255);
 }
+
+footer {
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+footer span {
+  display: inline-block;
+}
