@@ -138,56 +138,37 @@ span.cursor {
 .About {
   background-color: #fff;
   color: #000;
-  min-height: 100vh;
   padding: 2em;
   overflow: auto;
+  text-align: center;
 }
 
 .About h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-family: "Oswald";
   border-bottom: 3px solid black;
   text-shadow: 2px 2px 5px grey;
 }
 
-.About > p > span::first-letter {
-  font-size: 3rem;
+.soft-skill {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  padding: 10px;
+  font-size: 20px;
 }
 
-.About p > span {
+.skill-item {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  flex-direction: column;
+}
+
+.skill-item > i {
   display: block;
-  width: 50vw;
-  float: left;
 }
 
-.About .myImage {
-  float: right;
-  margin-right: 1em;
-  padding: 1em;
-  width: 40vw;
-  max-width: 370px;
-  height: 40vh;
-  border: 2px solid #000;
-}
-
-.About .myImage p {
-  text-align: center;
-}
-
-.About .myImage p + p {
-  font-size: 3em;
-  line-height: 20vh;
-}
-
-.About p {
-  font-size: 1.5em;
-}
-
-@media screen and (max-width: 590px) {
-  .About .myImage {
-    display: none;
-  }
-}
 /* ----------------- "Skill" section  --------------------*/
 .Skill {
   display: grid;
