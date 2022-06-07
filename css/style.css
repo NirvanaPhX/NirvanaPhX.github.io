@@ -1,8 +1,15 @@
 /* Fonts Import*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 
 /* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   background-color: transparent;
   text-decoration: none;
@@ -10,6 +17,7 @@ a {
 }
 
 :root {
+  font-family: "Montserrat", Sans-serif;
   box-sizing: border-box;
   background-color: #000;
   color: #fff;
@@ -28,97 +36,72 @@ ol {
 
 /*************** Real code begin **************/
 
-/* first block */
 .container {
-  display: grid;
-  height: 100vh;
-  width: 90%;
-  grid-template-areas:
-    "image aside"
-    "main aside"
-    "footer aside";
-  grid-template-columns: 41.67% 58.33%;
-  grid-template-rows: 11.11% 38.88% 38.88% 11.11%;
-  grid-gap: 0.5em;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
-.blank {
-  grid-area: image;
-  margin-top: 3em;
-  margin-left: 3em;
-  filter: grayscale(100%);
-}
-
-.blank img {
+/* Header */
+header {
+  position: fixed;
   width: 100%;
-  height: 100%;
+  z-index: 99;
+  background-color: rgba(2, 1, 1, 0.49);
 }
 
-.main {
-  grid-area: main;
-  padding: 1em;
-  margin-left: 3em;
-  font-size: 1.2em;
-  min-width: fit-content;
-  height: 78vh;
+.header {
+  display: flex;
+  height: 124px;
+  min-width: 800px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.main h1 {
-  display: inline;
+.name-icon {
+  width: 80px;
+  height: 80px;
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 36px;
+  color: #eee;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  justify-self: start;
 }
 
-.main h1 + span {
+.X {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  padding-right: 3rem;
+  padding-top: 0.5rem;
+  margin: 0 auto;
+}
+
+.L {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+}
+
+nav {
+  height: 124px;
+  line-height: 124px;
+  font-size: 20px;
+}
+
+nav ul {
   float: right;
-  font-size: 1.5em;
+  margin: 0 auto;
+  height: 24px;
 }
 
-.nav-list {
-  grid-area: aside;
-  width: 100%;
-  margin-top: 3em;
-  padding: 1em;
-}
-
-.flex {
-  display: flex;
-  justify-content: right;
-}
-
-.flex > li {
-  flex: 1;
-  display: flex;
-  max-width: 160px;
-  flex-direction: column;
-  writing-mode: vertical-lr;
-  font-weight: bold;
-  border-left: 2px solid #333333;
-  font-size: 1.5em;
-  height: 78vh;
-  position: relative;
-  padding: 0.5em;
-}
-
-.flex > li span + span {
-  vertical-align: bottom;
-  margin-top: 0.5em;
-}
-
-.flex li:last-child {
-  border-right: 2px solid #333333;
-}
-
-.nav-list li .large-text {
-  font-size: 3rem;
-}
-
-.nav-list li .bottom {
-  flex: 1;
-  font-size: 4rem;
-  writing-mode: horizontal-tb;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+ul li {
+  float: left;
+  padding: 0.3rem 1.3rem;
 }
 
 /* ----------------- TypeWriter Effect section  --------------------*/
@@ -128,12 +111,10 @@ ol {
   background-color: #000;
   justify-content: center;
   height: 95vh;
-  margin-left: 3em;
 }
 
 .typewriter h1 {
   color: white;
-  font-family: "Roboto", sans-serif;
   font-size: 5em;
   font-weight: 300;
 }
@@ -361,8 +342,4 @@ footer {
   height: 24px;
   line-height: 24px;
   text-align: center;
-}
-
-footer span {
-  display: inline-block;
 }
