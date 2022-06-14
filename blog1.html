@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Li's Blog on React Hooks</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="blog-header lh-1 py-3">
+            <div class="row flex-nowrap justify-content-center align-items-center">
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">Li's Blog</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">Next Blog Post</h1>
+                <p class="lead my-3"> Continue on with the jounrey of React hooks. Explore more on using the most
+                    recommonded way of using React.</p>
+                <p class="lead mb-0"><a href="#" class="text-white fw-bold">Coming Soon...</a></p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Website</strong>
+                        <h3 class="mb-0">My Personal Website</h3>
+                        <p class="card-text mb-auto">This is my Portfolio website designed and coded by myself. I am
+                            still working on improving it so let me know if you have any suggestions. </p>
+                        <a href="https://nirvanaphx.github.io/" class="stretched-link">More about me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Project</strong>
+                        <h3 class="mb-0">My Recent Project</h3>
+                        <p class="mb-auto">This is my most recent project developed using the MERN stack. It is a social
+                            media app allowing user to register, login, make post and connect with each other.</p>
+                        <a class="btn btn-primary" href="https://secret-stream-72025.herokuapp.com/"
+                            class="stretched-link mt-2">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Blog Post 1
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title mb-1">From React to React Hooks</h2>
+                    <p class="blog-post-meta">June 14, 2022 by <a href="#">Xiaomeng Li</a></p>
+
+                    <p>This blog post gives an overview of React, React's history, why we use it, and how we can pivot
+                        from
+                        using classic class component to React Hooks. Also, a simple demonstration video is included at
+                        the end
+                        so you can follow along.
+                    </p>
+
+                    <h2>Introdcution</h2>
+                    <hr>
+                    <p>In the world of software development, there will be one phrase that you would hear every day -
+                        seperation of concerns.
+                        Everything is built on top of layers of abstration which is a way of <strong> seperation of
+                            concerns</strong>.
+                    </p>
+
+
+                    <h3 class="mt-3">From HTML to JavaScript</h3>
+                    <p>
+                        Now let us think about the history of web applications.
+
+                        In the beginning, we just want to achieve one simple task - to display data or information on
+                        the Internet.
+                        Therefore, there is the birth of HTML and XML which browser can use to build a DOM tree and
+                        render.
+                        However, what is the fun in it if there are only piles of text laying on top of each other.
+                        So, CSS comes to the rescue to make our web pages beautiful. User interface, right? Great!
+                        But we human are a cursious kind of creature and we never satisfy.
+                        We get bored with static files pretty soon and then JavaScript arrives.
+                    </p>
+
+                    <h3 class="mt-3">Rethinking the traditional seperation of concerns</h3>
+                    <p>
+                        The history have decided the way how we used to seperated our concerns - the DOM, CSS and
+                        Logic(JavaScript).
+
+                        Again, we are human and laziness is in our nature so we hate repeated tasks.
+                        In the software world, we invented a wonderful word to hide our lazy nature and call it "code
+                        reusability".
+
+                        Now our traditional way of seperating things up make a lot of senses but if we consider about
+                        code resuability, we realize that is not the best way to do it.
+
+                        You may be able to take out some CSS and reuse it which is what the CSS libaries, for example,
+                        Bootstrap, are doing.
+                        You may also take out some logic and reuse it which is what the JavaScript libaries, for
+                        example, JQuery, are doing. (Of course, JQuery can do more than that. I am just focusing on the
+                        reusability here.)
+                        However, in general, it is not the best. (Easy for us to say it now but it actually takes years
+                        and years failure and experience for developers to realize it)
+                    </p>
+
+                    <h3 class="mt-3">New way of doing it</h3>
+                    <p>
+                        Let's relate a little to reality, how do we reuse things in real life?
+                        If the tires on your vehicle worn out, you don't throw the vehicle away(if you do, please call
+                        me first), you just replace them. Similarly, if your battery dies, you simply get a new one.
+                        So we break down a big chunk into smaller pieces(In React, they are called Components).
+                        Hurray! You just learned the concept behind React.
+
+                        Now let us talk about React. In React, the view and logic are grouped together to build up a
+                        Component and the Component can be reused.
+                        Indeed, it makes sense that view and logic should be tightly coupled for better code
+                        reusability.
+
+                        With that concept, a bunch of smart developers from Facebook or Meta decided to build a
+                        framework.
+
+                        Of course that is not the only reason why they developed React.
+                        Another obvious reason is to handle the diffrences between browser companies Web APIs since
+                        different browsers have their own JavaScript Engine.
+                    </p>
+
+                    <h3 class="mt-3">Why React?</h3>
+                    <p>
+                        With enough digging, let us pause and summarize what we have learned and figure out the big
+                        "WHY".
+                        So why should we use React?
+                    </p>
+
+                    <h4><em>1. React is the trend</em></h4>
+                    <p>
+                        React has been tested and approved by many big companies, for example, Meta, Instragram,
+                        Microsoft, you name it.
+                        Among the most widely used three frameworks (React, Vue, Angular), React still have the most
+                        users.
+                        This also means React is one of the most demanding skills in front-end development.
+                        With a simple search, you will find that 7, 8 out of 10 companies require React as a skill from
+                        a front-end developer.
+                    </p>
+
+                    <h4><em>2. React is declarative and state-driven</em></h4>
+                    <p>
+                        One of the reason that made React so successful is due to its simplicity.
+                        React is declarative instead of imperative.
+                        You simply tells React what you want to render and React will handle the rest.
+                        Also, React is state-driven which saves you from trying to manage state by yourself.
+                    </p>
+
+                    <h4><em>3. React is faster and more efficient</em></h4>
+                    <p>
+                        Thanks to React virtual DOM, we don't have to manually manipulate the real DOM which could have
+                        been a real pain.
+                        Another benefit by using virtual DOM and React's diff algorithm is performance boost. Instead of
+                        updating DOM one by one and triggering restructure of the DOM.
+                        React can automatically bundle up some of the actions and make changes to the real DOM only when
+                        necessary.
+                    </p>
+
+                    <h4><em>4. React variant can work on other platform</em></h4>
+                    <p>
+                        Once we have learnt React, we can pick up React Native and React VR easily.
+                        That means we can code for not only browsers but also mobile and even VR. How exciting.
+                    </p>
+
+                    <h2 class="mt-3">A Peek at React</h2>
+                    <hr>
+                    <p>
+
+                        Enough of history, finally, we can talk about React.
+                        Before fully diving into React, let's briefly go over some basic concepts.
+                    </p>
+
+                    <h3 class="mt-3">What is a Component?</h3>
+                    <p>
+
+                        We can think of a component as a state machine.
+                        It may contain data, called state and the component will generate HTML via a syntax sugar called
+                        JSX.
+                        Whenever the maintained data changes, the machine will rerun and generate something different
+                        based on the new state.
+                    </p>
+
+                    <h3 class="mt-3">Class Component vs Function Component</h3>
+                    <p>
+                        There are two types of Components in React: Class Component and Function Component.
+                        Before React 15.8, state only exist in class component so if we want to use state we will have
+                        to make it a class component.
+                        (We will cover state in the next post. For now, just simply think state as anything that can
+                        change in a web page.)
+                    </p>
+
+                    <h3 class="mt-3"> Component from React to React Hooks </h3>
+                    <p>
+                        With that in mind, let us see how we can create a component.
+                    </p>
+
+                    <h4><em> 1. Create React Component with createClass() </em></h4>
+                    <img src="./img/codesnippet/react-grandpa.png" alt="screenshot for code snippet">
+
+                    <h4><em> 2. Create React Component with extending the React.Component class</em></h4>
+                    <img src="./img/codesnippet/react-dad.png" alt="screenshot for code snippet">
+
+                    <h4><em>3. Create React Component with hooks</em></h4>
+                    <img src="./img/codesnippet/react-son.png" alt="screenshot for code snippet">
+
+                    <h3 class="mt-3">Benefit of using hooks</h3>
+                    <p>
+                        We have looked at both class component and functional component.
+                        We have also looked at the historical way of creating React component and how React Hooks
+                        creates component.
+                        What is the reason to use React Hooks?
+                    </p>
+
+                    <h4><em>1. Easy to understand</em></h4>
+                    <p>
+                        A class component has to extend the React.Component object to get the sweetness of React
+                        (capabilities of React like setState() and lifecycle functions).
+                        Also, in class component, we have to write constructor and call the super() method to inherite
+                        all the functions and properties (Even though there is a work around, you need a deep
+                        understanding of JavaScript to not confuse yourself).
+                        For event handlers, we have to use bind() in the constructor to access the component instance
+                        "this" (Can be solved by using arrow function)
+                        Not to mention all the lifecycle methods, when and how to use them.
+                        With React hooks, everything becomes cystal clear.
+                        Call one function to get the state. Another to manage the side effect and so on.
+                        If everyone can understand it, guess what, "LESS BUGS".
+                    </p>
+
+                    <h4><em> 2. Better Code Reusability </em></h4>
+                    <p>
+                        In class components, because of the lifecycle methods, components are tightly coupled.
+                        Tightly coupled also means less reusability.
+                        On the other hand, functional components make code reuse much easier.
+                        You can even create your own hook to abstract some logic that can be easily transfered to
+                        another project.
+                    </p>
+
+                    <h2 class="">Diving into details of React</h2>
+                    <hr>
+                    <h3>State and Props</h3>
+                    <p>
+                        State is an object that contain properties that corresponds to the data required by the
+                        associated component.
+                        When state changes, it triggers re-render of the component which is controlled by React.
+                        In class component, we can call the setState() function to trigger a state change.
+                        One thing to keep in mind is that state should stay immutable.
+                        (Thanks to ES6 syntax, this is not as hard as it sounds)
+                    </p>
+                    <p>
+                        Another important concept is props. Props is similar to state.
+                        Instead of maintaining it locally as state, props are properties that will be passed down to
+                        child components of a component.
+                        Like state, when props change, a re-render will be triggered on the child components.
+                        We can think of props as a shared state with some limitation.
+                    </p>
+
+                    <h3>Code Demonstration: Replace class component with React Hook</h3>
+                    <p>
+                        Now let us try to convert a simple React App which is using class component to one that uses
+                        functional component.
+                    </p>
+
+                    <h4><em> 1. Change all the class component syntax to functional component syntax </em></h4>
+                    <p>
+                        For example, we can make the following changes:
+                    </p>
+                    <p>
+                        The code below is a typical class component, as we can clearly see it use the "class" keyword
+                        and "extends" the React.Component class.
+                    </p>
+
+                    <pre><code>
+// Class component
+class App extends React.Component {...}
+                    </code></pre>
+
+                    <p>
+                        JavaScript provides us three ways of declare a function but the two most commonly used ones are:
+                    </p>
+                    <ol>
+                        <li>Arrow Function</li>
+                        <li>Function Declaration</li>
+                    </ol>
+                    <p>
+                        In this demo, I will be using arrow function.
+                    </p>
+
+                    <h4><em>
+                            2. Get rid of the render() method
+                        </em></h4>
+                    <p>
+                        In a functional component we don't have the render() method.
+                        Instead React will render whatever is returned by the functional component.
+                        So we can simply extract the code inside render() method return value and remove the render().
+                        Other code inside the functional component can be moved to the function body.
+                    </p>
+
+                    <h4><em>
+                            3. Replace state and setState() by using useState() hook
+                        </em></h4>
+                    <p>
+                        In a functional component, we don't have access to the state, setState() and other lifecycle
+                        methods.
+                        The reason being we didn't extend the React.Component class.
+                        Therefore, we need to replace them by using the hooks.
+                        In this example, the only hook we are going to use is the useState() hook which can be used to
+                        substitute the state and setState() method.
+                    </p>
+
+                    <h4><em>
+                            4. Modify the instance method
+                        </em></h4>
+                    <p>
+
+                        When defining a class in JavaScript using the "class" keyword, since all the methods are
+                        properties of the instance or the class if they are static, they have no declaration.
+                        However, when we switch to using functional component, we have to declare the type when using
+                        arrow functions.
+                        A good practise is to use ES6 "const" keyword to declare them as constants.
+                    </p>
+
+                    <h4><em> 5. Fix other issues </em></h4>
+
+                    <h2> Conclusion </h2>
+                    <hr>
+
+
+                    <p>
+                        In this blog, we have looked at the Gensis of React, how we get from where we were to here
+                        today.
+                        From HTML to CSS, to JavaScript to JavaScript Libraries to front-end frameworks like React.
+                        Hopefully, that makes it clear on the very little step of FrontEnd Development.
+                        Then, we talked about React and its main concepts: state and props.
+                        Finally, we went through a simple demo on how we can refactor our code from using class
+                        component to functional component.
+                        I hope you've got your time worth reading this blog and learnt something.
+                        In my next blog, we will go over some more hooks function.
+                        See you all there!
+                    </p>
+
+                    <h3>
+                        Source Code:
+                    </h3>
+                    <p><a href="https://github.com/NirvanaPhX/React-TodoList" target="_blank">
+                            https://github.com/NirvanaPhX/React-TodoList
+                        </a>
+                    </p>
+
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">About Me</h4>
+                        <p class="mb-2">
+                            I am a software developer student graduating in August.
+                            I am self-motivated and passionate about technology.
+                        <ul>
+                            <li>Language: Java, JavaScript </li>
+                            <li>Database: OracleSQL, MySQL, MongoDB, GraphQL</li>
+                            <li>Frameworks: ReactJS, NodeJS, ExpressJS</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Contact Me</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li class="h5"><a href="https://github.com/NirvanaPhX"><i
+                                        class="fa-brands fa-github"></i>&nbsp;Github</a>
+                            </li>
+                            <li class="h5"><a href="https://www.linkedin.com/in/xiaomeng-li-sd/"><i
+                                        class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a></li>
+                            <li class="h5"><a href="mailto: lixiaomengg@gmail.com"><i
+                                        class="fa-solid fa-envelope"></i>&nbsp;Email</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="blog-footer">
+        <p>Blog built using <a href="https://getbootstrap.com/">Bootstrap Template</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>
