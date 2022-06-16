@@ -46,7 +46,7 @@
     <!------------------------ About Section ------------------------>
     <section class="About" id="about">
         <div class="container">
-            <h1>ABOUT ME</h1>
+            <h1><u>ABOUT ME</u><span>/</span></h1>
 
             <div class="soft-skill">
                 <div class="skill-item">
@@ -71,70 +71,95 @@
 
     <!------------------------ Skill Section ------------------------>
     <section class="Skill" id="skill">
-        <aside>
-            <span>My ToolBox</span>
-        </aside>
+        <div class="container">
+            <aside>
+                <span>My Skill Set</span>
+            </aside>
 
-        <div class="skill-row">
-            <h1>Language</h1>
-            <hr>
-            <div class="languages">
-                <figure class="language-icons">
-                    <img src="./img/icons/java(color).png" alt="Java logo">
-                    <figcaption>Java</figcaption>
-                </figure>
-                <figure class="language-icons">
-                    <img src="./img/icons/python(color).png" alt="Python logo">
-                    <figcaption>Python</figcaption>
-                </figure>
-                <figure class="language-icons">
-                    <img src="./img/icons/js.png" alt="JavaScript logo">
-                    <figcaption>JavaScript</figcaption>
-                </figure>
+            <div class="skill-row">
+                <h1>Languages<span>/</span></h1>
+                <div class="languages">
+                    <figure class="language-icons">
+                        <img src="./img/icons/java(color).png" alt="Java logo">
+                        <figcaption>Java</figcaption>
+                    </figure>
+                    <figure class="language-icons">
+                        <img src="./img/icons/js.png" alt="JavaScript logo">
+                        <figcaption>JavaScript</figcaption>
+                    </figure>
+                    <figure class="language-icons">
+                        <img src="./img/icons/typescript.png" alt="typescript logo">
+                        <figcaption>TypeScript</figcaption>
+                    </figure>
+                </div>
             </div>
-        </div>
 
-        <div class="skill-row">
-            <h1>Database</h1>
-            <hr>
-            <div class="languages">
-                <figure class="language-icons">
-                    <img src="./img/icons/oracle(color).png" alt="Oracle logo">
-                    <figcaption>Oracle PL/SQL</figcaption>
-                </figure>
-                <figure class="language-icons">
-                    <img src="./img/icons/mysql(color).png" alt="MySQL logo">
-                    <figcaption>MySQl</figcaption>
-                </figure>
-                <figure class="language-icons">
-                    <img src="./img/icons/mongodb-144.png" alt="MongoDB logo">
-                    <figcaption>MongoDB</figcaption>
-                </figure>
+            <div class="skill-row">
+                <h1>Database <span>/</span> </h1>
+                <div class="languages">
+                    <figure class="language-icons">
+                        <img src="./img/icons/oracle(color).png" alt="Oracle logo">
+                        <figcaption>Oracle PL/SQL</figcaption>
+                    </figure>
+                    <figure class="language-icons">
+                        <img src="./img/icons/mysql(color).png" alt="MySQL logo">
+                        <figcaption>MySQl</figcaption>
+                    </figure>
+                    <figure class="language-icons">
+                        <img src="./img/icons/mongodb-144.png" alt="MongoDB logo">
+                        <figcaption>MongoDB</figcaption>
+                    </figure>
+                </div>
             </div>
-        </div>
 
-        <div class="skill-row">
-            <h1>Frameworks</h1>
-            <hr>
-            <div class="languages">
-                <figure class="language-icons">
-                    <img src="./img/icons/react.png" alt="Oracle logo">
-                    <figcaption>ReactJS</figcaption>
-                </figure>
-                <figure class="language-icons">
-                    <img src="./img/icons/nodejs-144.png" alt="MySQL logo">
-                    <figcaption>NodeJS</figcaption>
-                </figure>
-                <figure class="language-icons">
-                    <img src="./img/icons/icons8-django-144.png" alt="MongoDB logo">
-                    <figcaption>Django</figcaption>
-                </figure>
+            <div class="skill-row">
+                <h1>Frameworks <span>/</span></h1>
+                <div class="languages">
+                    <figure class="language-icons">
+                        <img src="./img/icons/react.png" alt="Oracle logo">
+                        <figcaption>ReactJS</figcaption>
+                    </figure>
+                    <figure class="language-icons">
+                        <img src="./img/icons/nodejs-144.png" alt="MySQL logo">
+                        <figcaption>NodeJS</figcaption>
+                    </figure>
+                    <figure class="language-icons">
+                        <img src="./img/icons/icons8-django-144.png" alt="MongoDB logo">
+                        <figcaption>Django</figcaption>
+                    </figure>
+                </div>
             </div>
         </div>
     </section>
 
     <!---------------------- Project Section ------------------------>
-    <section class="Project" id="project">
+    <section class="Project container" id="project">
+        <h1>Recent</h1>
+        <h1>Project</h1>
+        <div class="project-list">
+            <div class="project-item">
+                <h2>DevWorld - Social Media App</h2>
+                <div class="item">
+                    <img src="./img/project-devworld.png" alt="An image for the project Car Rental Website">
+                    <div class="item-back">
+                        <p>
+                            This is a social media app for developers to connect to each other.
+                            Users can sign up, log in, and each have their own profile which will be shared.
+                            Also, users can create posts and comment on others' posts.
+                        </p>
+                        <div class="button-group">
+                            <a href="https://secret-stream-72025.herokuapp.com/" target="_blank">Demo</a>
+                            <a href="https://github.com/NirvanaPhX/SocialMediaApp" target="_blank">Code</a>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag">React Hooks</span>
+                <span class="tag">Redux, thunk</span>
+                <span class="tag">React Router</span>
+                <span class="tag">NodeJS, Express</span>
+            </div>
+        </div>
+
         <h1>Front End</h1>
         <div class="project-list">
             <div class="project-item">
@@ -200,41 +225,6 @@
                 <span class="tag">JavaScript</span>
                 <span class="tag">JQuery</span>
                 <span class="tag">AJAX</span>
-                <p></p>
-            </div>
-        </div>
-
-        <h1>MERN Stack</h1>
-        <div class="project-list">
-            <div class="project-item">
-                <h2>Social Media App</h2>
-                <div class="item">
-                    <img src="./img/project-devworld.png" alt="An image for the project Car Rental Website">
-                    <div class="item-back">
-                        <p>
-                            This is a social media app for developers to connect to each other.
-                            Users can sign up, log in, and each have their own profile which will be shared.
-                            Also, users can create posts and comment on others' posts.
-                        </p>
-                        <div class="button-group">
-                            <a href="https://secret-stream-72025.herokuapp.com/" target="_blank">Demo</a>
-                            <a href="https://github.com/NirvanaPhX/SocialMediaApp" target="_blank">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <span class="tag">React Hooks</span>
-                <span class="tag">Redux, thunk</span>
-                <span class="tag">React Router</span>
-                <span class="tag">NodeJS, Express</span>
-            </div>
-
-            <div class="project-item">
-                <h2>Coming Soon</h2>
-                <p></p>
-            </div>
-
-            <div class="project-item">
-                <h2>More</h2>
                 <p></p>
             </div>
         </div>

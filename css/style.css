@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 /* Reset CSS */
 * {
@@ -61,12 +66,14 @@ header {
   width: 80px;
   height: 80px;
   font-family: 'Lavishly Yours', cursive;
-  font-size: 36px;
-  color: #eee;
-  border: 1px solid #fff;
+  font-weight: 800;
+  font-size: 34px;
+  color: #5a473a;
+  border: 3px solid #5a473a;
   border-radius: 50%;
   text-align: center;
   justify-self: start;
+  text-shadow: 1px 1px 3px #fff;
 }
 
 .X {
@@ -115,8 +122,12 @@ ul li {
 
 .typewriter h1 {
   color: white;
+  font-family:"Satisfy", "Dancing Script", cursive;
   font-size: 5em;
-  font-weight: 300;
+}
+
+#typewriter-text {
+  font-family: "Kaushan Script", cursive;
 }
 
 span.cursor {
@@ -145,9 +156,14 @@ span.cursor {
 
 .About h1 {
   font-size: 2.5em;
-  font-family: "Oswald";
-  border-bottom: 3px solid black;
-  text-shadow: 2px 2px 5px grey;
+  font-family: 'Lusitana', serif;
+  /* border-bottom: 3px solid #5a473a; */
+  text-shadow: 1px 1px 2px black;
+}
+
+.About h1 span {
+  margin-left: 1em;
+  color: #5a473a;
 }
 
 .soft-skill {
@@ -161,8 +177,18 @@ span.cursor {
 .skill-item {
   display: flex;
   justify-content: center;
-  height: 60px;
   flex-direction: column;
+  height: 60px;
+  border-left: 9px solid #ddd9d6;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin: 1em 10px;
+  transition: all 0.5s;
+}
+
+.skill-item:hover {
+  transition: all 0.5s;
+  transform: scale(120%); 
 }
 
 .skill-item > i {
@@ -170,25 +196,27 @@ span.cursor {
 }
 
 /* ----------------- "Skill" section  --------------------*/
-.Skill {
+.Skill .container {
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 2fr 8fr;
   grid-template-rows: repeat(3, 1fr);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 .Skill aside {
   grid-column: 1/2;
   grid-row: 1/4;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .Skill aside > span {
-  display: block;
+  font-family: 'Kalam', cursive;
   font-size: 4em;
-  margin-left: 0.5em;
-  /* rotate: -90deg; */
+  margin-right: 0.5em;
 }
 
 .Skill h1 {
@@ -197,22 +225,38 @@ span.cursor {
   text-align: center;
 }
 
-.Skill hr {
-  display: block;
-  height: 2px;
-  width: 80%;
+.skill-row {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ddd9d6;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.skill-row h1 span {
+  color:#5a473a;
+  margin-left: 0.5em;
+  font-weight: 900;
 }
 
 .Skill .languages {
   text-align: center;
   display: flex;
   justify-content: center;
+  perspective: 200px;
 }
 
 .Skill .language-icons {
   padding: 1rem;
   border-radius: 50%;
   display: inline-block;
+  transition: all 1s;
+}
+
+.Skill .language-icons:hover {
+  transform: rotateY(360deg);
 }
 
 .language-icons img {
@@ -229,19 +273,18 @@ span.cursor {
 /* ----------------- "Project" section  --------------------*/
 
 .Project {
-  margin: 0 auto;
-  background-color: #fff;
-  color: #000;
-  min-height: 90vh;
-  padding: 2em;
-  overflow: auto;
+  margin: 5vh auto;
+  text-align: right;
 }
 
 .Project h1 {
-  font-size: 2em;
-  font-family: "Roboto", sans-serif;
-  border-bottom: 3px solid black;
+  font-size: 4em;
+  font-family: 'Kalam', cursive;
   text-shadow: 2px 2px 5px grey;
+}
+
+.Project h1:first-of-type {
+  margin-right: 1em;
 }
 
 .Project .project-list {
