@@ -274,62 +274,87 @@ span.cursor {
 
 .Project {
   margin: 5vh auto;
-  text-align: right;
+}
+
+.Project.container {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .Project h1 {
   font-size: 4em;
   font-family: 'Kalam', cursive;
   text-shadow: 2px 2px 5px grey;
+  line-height: 1em;
 }
 
-.Project h1:first-of-type {
-  margin-right: 1em;
-}
-
-.Project .project-list {
-  margin: 0 auto;
+.Project.container .project-col {
   display: flex;
-  justify-content: space-around;
-  max-width: 1024px;
+  flex-direction: column;
+  width: 560px;
 }
 
-.Project .project-item {
-  border: 1px solid #000;
-  flex: 1;
-  margin-right: 1rem;
+.Project.container .project-col h1 {
+  text-align: right;
 }
 
-.Project .project-item h2 {
-  font-size: 1.5rem;
-  text-align: center;
+.Project.container .project-col h1 span
+{
+  color: #5a473a
 }
 
-.Project .project-item .item {
+.Project .item {
   position: relative;
+  height: 330px;
+  perspective: 300px;
+  padding: 1em;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+  margin: 15px 5px;
 }
 
-.Project .project-item .item .item-back {
+.Project .item:hover {
+  transform: rotateY(180deg);
+}
+
+.Project .item .item-front, 
+.Project .item .item-back
+{
   position: absolute;
-  display: none;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  backface-visibility: hidden;
   padding: 1em;
-  font-size: 1.2em;
-  background-color: #eee;
-  opacity: 0.8;
-  left: 0;
-  top: 0;
 }
 
-.Project .project-item .item .item-back .button-group {
+.Project  .item .item-back {
+  background-color: #000;
+  border: 1px solid white;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+.Project .project-col .item img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 1px 1px 2px white;
+}
+
+.Project .item .item-back .button-group {
   position: absolute;
-  bottom: 10%;
+  bottom: 1em;
   left: 10%;
   width: 80%;
 }
 
-.Project .project-item .item .item-back a {
+.Project .item .item-back  {
+  font-size: 1.2em;
+}
+
+.Project .item .item-back a {
   display: block;
   text-align: center;
   padding: 0.5em 1.5em;
@@ -339,27 +364,16 @@ span.cursor {
   border-radius: 1em;
 }
 
-.Project .project-item .item .item-back a:hover {
+.Project .item .item-back a:hover {
   color: #369;
   background-color: ivory;
 }
 
-.Project .project-item .item:hover .item-back {
-  display: block;
-}
-
-.Project .project-item img {
-  width: 100%;
-}
-
-.Project .project-item .tag {
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 1em;
-  padding: 0.3em 0.5em;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
-  background: rgb(200, 255, 255);
+.Project .project-col .more {
+  font-size: 3em;
+  border-bottom: 8px solid #5a473a;
+  padding: 1em;
+  margin: 1em;
 }
 
 footer {
