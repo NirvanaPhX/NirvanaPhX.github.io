@@ -10,45 +10,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
     <!-------------------------- Header ---------------------------->
     <header>
-        <div class="container header">
+        <div class="header header_origin">
             <div class="name-icon">
                 <div class="X">X</div>
                 <div class="L">L</div>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#skill">SKILL</a></li>
-                    <li><a href="#project">PROJECT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="/blog1.html">BLOG</a></li>
+                <ul class="nav_links">
+                    <li><a href="#about" class="nav_link">.ATTRIBUTE</a></li>
+                    <li><a href="#skill" class="nav_link">.SKILL</a></li>
+                    <li><a href="#project" class="nav_link">.PROJECT</a></li>
+                    <li><a href="#contact" class="nav_link">.CONTACT</a></li>
+                    <li><a href="./blogs/blog1.html" class="nav_link">.BLOG</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!------------------------ Top Section -------------------------->
-    <section class="typewriter container">
-        <h1>
-            <span>Hello there!</span>
-            <br>
+    <section class="container top">
+        <div class="flex-container">
+            <div class="text-left">
+                <h1>Hello,</h1>
+                <h1>It's</h1>
+                <h1>Li</h1>
+            </div>
+            <div class="image-container text-right">
+                <img src="./img/stars.jpg" alt="stars">
+            </div>
+        </div>
+        <h2>
             <span id="typewriter-text"
-                data-text='["Welcome to my page!", "My name is Li!", "I am a Fullstack developer!"]'></span>
+                data-text='["A Fullstack Developer", "A Tech Enthusiast", "A Food Lover"]'></span>
             <span class="cursor"></span>
-        </h1>
+        </h2>
     </section>
 
     <!------------------------ About Section ------------------------>
-    <section class="About" id="about">
+    <section class="About section-hidden" id="about">
         <div class="container">
-            <h1><u>ABOUT ME</u><span>/</span></h1>
+            <div class="title">
+                <h1><span>Li</span><span>.</span>attribute</h1>
+            </div>
 
             <div class="soft-skill">
+                <div class="decoration">
+                    <i class="fa-solid fa-quote-left"></i>
+                </div>
                 <div class="skill-item">
                     <i class="fa-solid fa-code"></i>
                     <p>Passionate about technology</p>
@@ -65,15 +79,19 @@
                     <i class="fa-solid fa-brain"></i>
                     <p>Strong problem solving skills</p>
                 </div>
+                <div class="decoration right">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
             </div>
+        </div>
         </div>
     </section>
 
     <!------------------------ Skill Section ------------------------>
-    <section class="Skill" id="skill">
+    <section class="Skill section-hidden" id="skill">
         <div class="container">
             <aside>
-                <span>My Skill Set</span>
+                <span>Li.skills</span>
             </aside>
 
             <div class="skill-row">
@@ -133,9 +151,9 @@
     </section>
 
     <!---------------------- Project Section ------------------------>
-    <section class="Project container" id="project">
+    <section class="Project container section-hidden" id="project">
         <div class="project-col">
-            <h1>My<span>+</span></h1>
+            <h1>Li<span>.</span></h1>
             <h1>Project</h1>
 
             <div class="item">

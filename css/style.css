@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 /* Reset CSS */
 * {
@@ -24,8 +25,12 @@ a {
 :root {
   font-family: "Montserrat", Sans-serif;
   box-sizing: border-box;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-tertiary: #5a473a;
+  --color-complement: #ddd9d6;
 }
 
 *,
@@ -46,20 +51,54 @@ ol {
   margin: 0 auto;
 }
 
-/* Header */
-header {
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-  background-color: rgba(2, 1, 1, 0.49);
+.btn {
+  display: inline-block;
+  background-color: var(--color-complement);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
+.section-hidden {
+  transform: translateY(10rem);
+  opacity: 0;
+}
+
+/* Header */
 .header {
   display: flex;
-  height: 124px;
+  width: 100%;
   min-width: 800px;
+  height: 100px;
   align-items: center;
   justify-content: space-between;
+  z-index: 99;
+  padding: 0 360px;
+  transition: all 0.6s;
+}
+
+.header_origin {
+  background-color: #000;
+  color: #fff;
+}
+
+.header_onwhite {
+  background: linear-gradient(146deg, rgba(242,249,250, .8) 0%, rgba(33,34,34, .8) 50%, rgba(0,0,0, .8) 66%, rgba(41,43,43,.8) 82%, rgba(242,249,250,.8) 100%);
+  color: var(--color-secondary);
+}
+
+.header_onblack {
+  background: linear-gradient(30deg, rgba(0,0,0,.6) 10%, rgba(33,34,34,0.6180672952774859) 18%, rgba(242,249,250,.8) 49%, rgba(41,43,43,.9) 97%);
+  color: var(--color-primary);
+}
+
+.header.sticky {
+  position: fixed;
 }
 
 .name-icon {
@@ -68,8 +107,8 @@ header {
   font-family: 'Lavishly Yours', cursive;
   font-weight: 800;
   font-size: 34px;
-  color: #5a473a;
-  border: 3px solid #5a473a;
+  color: var(--color-tertiary);
+  border: 3px solid var(--color-tertiary);
   border-radius: 50%;
   text-align: center;
   justify-self: start;
@@ -95,8 +134,8 @@ header {
 }
 
 nav {
-  height: 124px;
-  line-height: 124px;
+  height: 100px;
+  line-height: 100px;
   font-size: 20px;
 }
 
@@ -109,25 +148,65 @@ nav ul {
 ul li {
   float: left;
   padding: 0.3rem 1.3rem;
+  transition: all 0.5s;
+}
+
+ul li:hover {
+  transform: translateY(-0.5em);
 }
 
 /* ----------------- TypeWriter Effect section  --------------------*/
-.typewriter {
-  display: flex;
-  flex-direction: column;
+.top {
+  position: relative;
+  padding-top: 6em;
   background-color: #000;
-  justify-content: center;
   height: 95vh;
+  letter-spacing: 0.3em;
 }
 
-.typewriter h1 {
-  color: white;
-  font-family:"Satisfy", "Dancing Script", cursive;
-  font-size: 5em;
+.top .flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top h1 {
+  color: #fff;
+  font-family:"Montserrat", cursive;
+  font-size: 6em;
+  text-shadow: 1px 1px 3px #fff;
+}
+
+.top h2 {
+  margin-top: 1em;
+  margin-left: 3em;
+  font-size: 4.5em;
+  font-weight: 800;
+}
+
+.top h3 {
+  font-size: 3.5em;
+}
+
+.top .flex-container .text-left::before {
+  content: "";
+  border-left: 20px solid var(--color-tertiary);
+  display: inline-block;
+  height: 27em;
+  position: absolute;
+  transform: rotate(-30deg);
+  top: 5em;
+}
+
+.top .text-right.image-container {
+  max-width: 600px;
+}
+
+.top .text-right.image-container img {
+  width: 100%;
 }
 
 #typewriter-text {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Montserrat", cursive;
 }
 
 span.cursor {
@@ -152,34 +231,80 @@ span.cursor {
   padding: 2em;
   overflow: auto;
   text-align: center;
+  padding-top: 120px;
+  transition: transform 1s, opacity 1s;
 }
 
 .About h1 {
+  display: inline-block;
   font-size: 2.5em;
   font-family: 'Lusitana', serif;
-  /* border-bottom: 3px solid #5a473a; */
+  border-bottom: 3px solid var(--color-tertiary);
   text-shadow: 1px 1px 2px black;
+  margin-bottom: 1.5em;
+  letter-spacing: 0.8rem;
 }
 
 .About h1 span {
-  margin-left: 1em;
-  color: #5a473a;
+  color: var(--color-tertiary);
+  font-size: 4rem;
+}
+
+
+.About .container .title {
+  text-align: right;
+  padding-right: 5rem;
+ }
+
+.container .decoration {
+  position: absolute;
+  color: var(--color-tertiary);
+  font-size: 6rem;
+}
+
+.container .decoration.left {
+  left: 0;
+  top: 0
+}
+
+.container .decoration.right {
+  position: absolute;
+  text-align: right;
+  right: 0;
+  bottom: 0;
 }
 
 .soft-skill {
+  position: relative;
   display: grid;
   grid-template-columns: auto auto;
   gap: 15px;
   padding: 10px;
   font-size: 20px;
+  /* background: var(--color-complement); */
+  /* box-shadow: 3px 3px 10px var(--color-tertiary); */
 }
+
+/* Test Style */
+/* .tab_container:before {
+  content: "";
+  height: 250%;
+  border: 2rem solid #5a473a;
+  border-radius: 5px;
+} */
+
+/* .tab_container .empty {
+  border: 1.3rem solid white;
+  border-radius: 4px;
+  transform: translateX(-2.4rem) translateY(1.3rem);
+  position: absolute;
+} */
 
 .skill-item {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 60px;
-  border-left: 9px solid #ddd9d6;
   padding-top: 2em;
   padding-bottom: 2em;
   margin: 1em 10px;
@@ -196,6 +321,11 @@ span.cursor {
 }
 
 /* ----------------- "Skill" section  --------------------*/
+.Skill {
+  padding-top: 90px;
+  transition: transform 1s, opacity 1s;
+}
+
 .Skill .container {
   display: grid;
   grid-template-columns: 2fr 8fr;
@@ -236,7 +366,7 @@ span.cursor {
 }
 
 .skill-row h1 span {
-  color:#5a473a;
+  color:var(--color-tertiary);
   margin-left: 0.5em;
   font-weight: 900;
 }
@@ -274,6 +404,8 @@ span.cursor {
 
 .Project {
   margin: 5vh auto;
+  padding-top: 120px;
+  transition: transform 1s, opacity 1s;
 }
 
 .Project.container {
@@ -300,7 +432,7 @@ span.cursor {
 
 .Project.container .project-col h1 span
 {
-  color: #5a473a
+  color: var(--color-tertiary)
 }
 
 .Project .item {
@@ -371,7 +503,7 @@ span.cursor {
 
 .Project .project-col .more {
   font-size: 3em;
-  border-bottom: 8px solid #5a473a;
+  border-bottom: 8px solid var(--color-tertiary);
   padding: 1em;
   margin: 1em;
 }

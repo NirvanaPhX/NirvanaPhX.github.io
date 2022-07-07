@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Explore more into React Hooks</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="blog-header lh-1 py-3">
+            <div class="row flex-nowrap justify-content-center align-items-center">
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark" href="#">Li's Tech Blog</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main class="container">
+
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                    Blog Post 2
+                </h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title mb-1">Explore more into React Hooks</h2>
+                    <p class="blog-post-meta">July 14, 2022 by <a href="#">Xiaomeng Li</a></p>
+
+                    <p>
+                        In my last blog post, we took a glimpse at React Hook and learned the basic of migrating a class
+                        component
+                        to React Hooks.
+                        In this blog post, I will expand on the previous blog. Together, we will continue adding more
+                        features to our todo app and exlpore on more hook
+                        functions.
+                        At the end of this blog, you should be able to code all the required logics in React Hooks as
+                    </p>
+
+                    <h2>Introdcution</h2>
+                    <hr>
+                    <p>
+                        In my last blog post, we have successfully migrated class components to React Hooks for our
+                        simple
+                        todo application. However, that is only the tip of the iceberg.
+                        Now we will continue our journey to review some other hook functions.
+                        We will keep building our todo app and bring in more features with the help of React Hooks.
+                    </p>
+
+
+                    <h3 class="mt-3">The useReducer Hook - managing collection of states</h3>
+                    <p>
+                        In our todo app, we have used useState hook to replace our state and setState() functions in
+                        the class component.
+                        The useState hook is good at managing a single state.
+                        An excellent application should provide feedback when necessary so our users won't be in the
+                        dark.
+                    </p>
+
+                    <p>
+                        For example, in our todo app, after users successfully added a task, we should inform them with
+                        a message.
+                        Therefore, I want to introduce another component into our application which is in charge of
+                        setting
+                        alert information. Everytime the users perform some actions, we will let them know if it has
+                        been successful or not.
+                        We will have two props to pass in this component called type and msg to control its color and
+                        message displayed.
+                        Also, in our parent component which is the App component, we will have a boolean value - display
+                        as
+                        our indicator whether to show the component.
+                        Now, we have a total of three state for a single component. Of course, we can call useState hook
+                        three times and manage those states seperately.
+                        But, what about if we have 10 states or 15 or even more. It will soon become a mess. The code is
+                        gonna be hard to read and it will be difficult to figure out which state to use.
+                    </p>
+
+                    <p>
+                        Luckily, we have the useReducer hook come to the rescue. It can manage a group of states
+                        centrally.
+                    </p>
+                    <p>
+                        The useReducer hook takes in two parameters: a reducer function and an initial state.
+                        It then returns an array with two elements, the state and a dispatch function.
+                        <code>
+                            const [state, dispatch] = useReducer(reducer, initialState);
+                        </code>
+                        The reducer function is a function that accepts a state value and an action value then generates
+                        a new state value.
+                        Reducer is almost always in the form of a switch statement. Of course, we can also use a if-else
+                        statement but
+                        switch, for sure, makes our code more readable and straight-forward.
+                    </p>
+                    <p>
+                        For our new component, let us first add our initial state.
+                        <code>
+                            const initialState = {display: }
+                        </code>
+                    </p>
+
+
+
+                    <h3 class="mt-3"> Video Demonstration </h3>
+                    <iframe src="https://www.youtube.com/embed/60kqT_iEWR8" frameborder="0" width="560"
+                        height="310"></iframe>
+                    <p>
+                        If the embedded video is not working, please use the link below to watch it.
+                    </p>
+                    <a target="_blank"
+                        href="https://mysait-my.sharepoint.com/personal/xiaomeng_li_edu_sait_ca/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxiaomeng%5Fli%5Fedu%5Fsait%5Fca%2FDocuments%2FRecordings%2FMeeting%20with%20Xiaomeng%20Li%2D20220615%5F152949%2DMeeting%20Recording%2Emp4&parent=%2Fpersonal%2Fxiaomeng%5Fli%5Fedu%5Fsait%5Fca%2FDocuments%2FRecordings&ga=1">
+                        Click here to watch the video
+                    </a>
+
+                    <h2 class="mt-3"> Conclusion </h2>
+                    <hr>
+
+                    <p>
+                        In this blog, we have looked at the Gensis of React, how we get from where we were to here
+                        today.
+                        From HTML to CSS, to JavaScript to JavaScript Libraries to front-end frameworks like React.
+                        Hopefully, that makes it clear on the very little step of FrontEnd Development.
+                        Then, we talked about React and its main concepts: state and props.
+                        Finally, we went through a simple demo on how we can refactor our code from using class
+                        component to functional component.
+                        I hope you've got your time worth reading this blog and learnt something.
+                        In my next blog, we will go over some more hooks function.
+                        See you all there!
+                    </p>
+
+                    <h3 class="mt-3">
+                        Source Code
+                    </h3>
+                    <p><a href="https://github.com/NirvanaPhX/React-TodoList" target="_blank">
+                            https://github.com/NirvanaPhX/React-TodoList
+                        </a>
+                    </p>
+
+                    <h3 class="mt-3">
+                        Citations
+                    </h3>
+                    <ul>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/learning/react-hooks/react-hooks-history?autoplay=true&u=2245281">LinkedIn
+                                Course - React Hooks by <a
+                                    href="https://www.linkedin.com/in/eveporcello/?trk=lil_instructor">Eve
+                                    Porcello</a></a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.linkedin.com/learning/react-design-patterns/take-your-react-skills-to-the-next-level?autoplay=true&u=2245281">
+                                LinkedIn Course - React: Design Patterns by <a
+                                    href="https://www.linkedin.com/in/shaun-wassell/?trk=lil_instructor">Shaun
+                                    Wassell</a>
+                            </a>
+                        </li>
+                    </ul>
+
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">About Me</h4>
+                        <p class="mb-2">
+                            I am a software developer student graduating in August.
+                            I am self-motivated and passionate about technology.
+                        <ul>
+                            <li>Language: Java, JavaScript </li>
+                            <li>Database: OracleSQL, MySQL, MongoDB, GraphQL</li>
+                            <li>Frameworks: ReactJS, NodeJS, ExpressJS</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">Contact Me</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li class="h5"><a href="https://github.com/NirvanaPhX"><i
+                                        class="fa-brands fa-github"></i>&nbsp;Github</a>
+                            </li>
+                            <li class="h5"><a href="https://www.linkedin.com/in/xiaomeng-li-sd/"><i
+                                        class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a></li>
+                            <li class="h5"><a href="mailto: lixiaomengg@gmail.com"><i
+                                        class="fa-solid fa-envelope"></i>&nbsp;Email</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="blog-footer">
+        <p>Blog built using <a href="https://getbootstrap.com/">Bootstrap Template</a>.</p>
+        <p>
+            <a href="#">Back to top</a>
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>
