@@ -1,458 +1,493 @@
 <!doctype html>
-<html lang="en">
+<htmltag lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.98.0">
-    <title>Explore more on React Hooks</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.98.0">
+        <title>Explore more on React Hooks</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/blog.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/blog/">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/blog.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
             }
-        }
 
-        .b-example-divider {
-            height: 3rem;
-            background-color: rgba(0, 0, 0, .1);
-            border: solid rgba(0, 0, 0, .15);
-            border-width: 1px 0;
-            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-        }
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
 
-        .b-example-vr {
-            flex-shrink: 0;
-            width: 1.5rem;
-            height: 100vh;
-        }
+            .b-example-divider {
+                height: 3rem;
+                background-color: rgba(0, 0, 0, .1);
+                border: solid rgba(0, 0, 0, .15);
+                border-width: 1px 0;
+                box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
 
-        .bi {
-            vertical-align: -.125em;
-            fill: currentColor;
-        }
+            .b-example-vr {
+                flex-shrink: 0;
+                width: 1.5rem;
+                height: 100vh;
+            }
 
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
+            .bi {
+                vertical-align: -.125em;
+                fill: currentColor;
+            }
 
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-    </style>
+            .nav-scroller {
+                position: relative;
+                z-index: 2;
+                height: 2.75rem;
+                overflow-y: hidden;
+            }
 
-    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-    <link href="blog.css" rel="stylesheet">
-</head>
+            .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+        </style>
 
-<body>
+        <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap"
+            rel="stylesheet">
+        <link href="blog.css" rel="stylesheet">
+    </head>
 
-    <div class="container">
-        <header class="blog-header lh-1 py-3">
-            <div class="row flex-nowrap justify-content-center align-items-center">
-                <div class="col-4 text-center">
-                    <a class="blog-header-logo text-dark" href="#">Li's Tech Blog</a>
+    <body>
+
+        <div class="container">
+            <header class="blog-header lh-1 py-3">
+                <div class="row flex-nowrap justify-content-center align-items-center">
+                    <div class="col-4 text-center">
+                        <a class="blog-header-logo text-dark" href="#">Li's Tech Blog</a>
+                    </div>
                 </div>
-            </div>
-        </header>
-    </div>
+            </header>
+        </div>
 
-    <main class="container">
+        <main class="container">
 
-        <div class="row g-5">
-            <div class="col-md-8">
-                <h3 class="pb-4 mb-4 fst-italic border-bottom">
-                    Blog Post 2
-                </h3>
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                        Blog Post 2
+                    </h3>
 
-                <article class="blog-post">
-                    <h2 class="blog-post-title mb-1">Explore more into React Hooks</h2>
-                    <p class="blog-post-meta">July 22, 2022 by <a href="#">Xiaomeng Li</a></p>
+                    <article class="blog-post">
+                        <h2 class="blog-post-title mb-1">Explore more into React Hooks</h2>
+                        <p class="blog-post-meta">July 22, 2022 by <a href="#">Xiaomeng Li</a></p>
 
-                    <p>
-                        In my last blog post, we took a glimpse at React Hook and learned the basic of migrating a
-                        simple class
-                        component to React Hooks.
-                        In this blog post, I will expand on the previous blog. Together, we will continue adding more
-                        features to our todo app and exlpore on more hook
-                        functions.
-                        At the end of this blog, you should be able to code all the required logics in React Hooks as
-                    </p>
+                        <p>
+                            In my last blog post, we took a glimpse at React Hook and learned the basic of migrating a
+                            simple class
+                            component to React Hooks.
+                            In this blog post, I will expand on the previous blog. Together, we will continue adding
+                            more
+                            features to our todo app and exlpore on more hook
+                            functions.
+                            At the end of this blog, you should be able to code all the required logics in React Hooks
+                            as
+                        </p>
 
-                    <h2>Introdcution</h2>
-                    <hr>
-                    <p>
-                        In my last blog post, we have successfully migrated class components to React Hooks for our
-                        simple
-                        todo application. However, that is only the tip of the iceberg.
-                        Now we will continue our journey to review some other hook functions.
-                        We will keep on building our todo app and bring in more features with the help of React Hooks.
-                    </p>
+                        <h2>Introdcution</h2>
+                        <hr>
+                        <p>
+                            In my last blog post, we have successfully migrated class components to React Hooks for our
+                            simple
+                            todo application. However, that is only the tip of the iceberg.
+                            Now we will continue our journey to review some other hook functions.
+                            We will keep on building our todo app and bring in more features with the help of React
+                            Hooks.
+                        </p>
 
 
-                    <h3 class="mt-3">The <em>useReducer</em>&nbsp;hook - managing collection of states</h3>
-                    <p>
-                        In our todo app, we have only dealt with the useState hook which we have used to replace
-                        the state and setState() functions in the class component.
-                        The useState hook is good at managing a single state.
-                    </p>
+                        <h3 class="mt-3">The <em>useReducer</em>&nbsp;hook - managing collection of states</h3>
+                        <p>
+                            In our todo app, we have only dealt with the useState hook which we have used to replace
+                            the state and setState() functions in the class component.
+                            The useState hook is good at managing a single state.
+                        </p>
 
-                    <p>
-                        An excellent application should provide feedback when necessary so our users won't be in the
-                        dark.
-                    </p>
+                        <p>
+                            An excellent application should provide feedback when necessary so our users won't be in the
+                            dark.
+                        </p>
 
-                    <p>
-                        For example, in our todo app, one thing we can improve on is after users perform some actions
-                        such as add a
-                        task.
-                        We could display a message to inform them if their actions are successful.
-                    </p>
-                    <p>
-                        To achieve this, I want to introduce another component which will set any alert information.
-                        So, everytime when the users perform some actions, we will let them know if the operations have
-                        been successful or not.
-                        We will have two props to be passed into this component called type and msg to control its color
-                        and
-                        message displayed.
-                        Also, in our parent component which is the App component, we will have a boolean value - display
-                        as our switch whether to show the component.
-                        Now, we have a total of three states for a single component. Of course, we can call useState
-                        hook
-                        three times and manage those states seperately or we can use a single object to manage all these
-                        states.
-                        But, what about if we have 10 states or 15 or even more. It will soon become a mess. The code is
-                        gonna be hard to read and it will be difficult to figure out which state to use.
-                    </p>
+                        <p>
+                            For example, in our todo app, one thing we can improve on is after users perform some
+                            actions
+                            such as add a
+                            task.
+                            We could display a message to inform them if their actions are successful.
+                        </p>
+                        <p>
+                            To achieve this, I want to introduce another component which will set any alert information.
+                            So, everytime when the users perform some actions, we will let them know if the operations
+                            have
+                            been successful or not.
+                            We will have two props to be passed into this component called type and msg to control its
+                            color
+                            and
+                            message displayed.
+                            Also, in our parent component which is the App component, we will have a boolean value -
+                            display
+                            as our switch whether to show the component.
+                            Now, we have a total of three states for a single component. Of course, we can call useState
+                            hook
+                            three times and manage those states seperately or we can use a single object to manage all
+                            these
+                            states.
+                            But, what about if we have 10 states or 15 or even more. It will soon become a mess. The
+                            code is
+                            gonna be hard to read and it will be difficult to figure out which state to use.
+                        </p>
 
-                    <p>
-                        Luckily, we have the useReducer hook come to the rescue. It can manage a group of states
-                        centrally.
-                    </p>
-                    <p>
-                        The useReducer hook takes in two parameters: a reducer function and an initial state.
-                        It then returns an array with two elements, the state and a dispatch function.
-                    <pre><code>
+                        <p>
+                            Luckily, we have the useReducer hook come to the rescue. It can manage a group of states
+                            centrally.
+                        </p>
+                        <p>
+                            The useReducer hook takes in two parameters: a reducer function and an initial state.
+                            It then returns an array with two elements, the state and a dispatch function.
+                        <pre><code>
 const [state, dispatch] = useReducer(reducer, initialState);
                     </code></pre>
-                    The reducer function is a function that accepts a state value and an action value then generates
-                    a new state value.
-                    Reducer is almost always in the form of a switch statement. Of course, we can also use a if-else
-                    statement but
-                    switch, for sure, makes our code more readable and straight-forward.
-                    </p>
-                    <p>
-                        The return value of the useReducer() hook are the current state and a dispatch function.
-                        We can access the state simply by using the state but to change our state now, we don't have a
-                        setXXX()
-                        function to call instead we use the dispatch function as an alternatives since our states are
-                        managed internally by the useReducer() hook.
-                    </p>
-                    <p>
-                        To use the dispatch function, we just pass in the action we would like to dispatch and data if
-                        required.
-                        But remeber, this action will correspond to our reducer function.
-                    </p>
-                    <p>
-                        Do not worry if this doesn't make any senses yet. I will explain more in the video and they will
-                        become more clear when you see the demo.
-                    </p>
-
-
-                    <h3 class="mt-3">The <em>useEffect</em>&nbsp;hook - managing side effects</h3>
-
-                    <div class="sidenote">
-                        <h4>
-                            A little detour of Class Component LifeCycle methods
-                        </h4>
-                        <p>
-                            React class components use lifecycle methods to help trigger or perform certain actions at
-                            certain time.
-                            The certain times will be tied to the three phases of React lifecyclecy: Mounting(born),
-                            Update(grow), Unmount(die).
-                            To understand how it works, here are two pictures of the old and new React LifeCycle:
+                        The reducer function is a function that accepts a state value and an action value then generates
+                        a new state value.
+                        Reducer is almost always in the form of a switch statement. Of course, we can also use a if-else
+                        statement but
+                        switch, for sure, makes our code more readable and straight-forward.
                         </p>
-                        <img src="../img/blog/new_lifecycle.png" alt="React New LifeCycle Methods" style="width: 100%;">
-                        <img src="../img/blog/old_lifecycle.jpeg" alt="React Old LifeCycle Methods"
-                            style="width: 100%;">
-                    </div>
+                        <p>
+                            The return value of the useReducer() hook are the current state and a dispatch function.
+                            We can access the state simply by using the state but to change our state now, we don't have
+                            a
+                            setXXX()
+                            function to call instead we use the dispatch function as an alternatives since our states
+                            are
+                            managed internally by the useReducer() hook.
+                        </p>
+                        <p>
+                            To use the dispatch function, we just pass in the action we would like to dispatch and data
+                            if
+                            required.
+                            But remeber, this action will correspond to our reducer function.
+                        </p>
+                        <p>
+                            Do not worry if this doesn't make any senses yet. I will explain more in the video and they
+                            will
+                            become more clear when you see the demo.
+                        </p>
 
-                    <p>Now, if you are screaming, shouting or cursing, it is totally normal. It will take quite some
-                        time
-                        and experience to understand all those methods - when to use them and how to use them.
-                        Even experienced developers may sometimes get confused and introduce bugs to the program.
-                    </p>
-                    <p>
-                        Lucky enough, we don't have to go through all these pain. (However, it will help you gain a deep
-                        understanding of React if you know the lifecycle of a React component.)
-                        Because in function component, it is much more straight-forward.
-                        Let us talk about the useEffect hook which as its name suggests is used to manage side effects.
-                    </p>
 
-                    <h4>What is Side Effect?</h4>
-                    <p>
-                        In the world of programming, a side effect is always related to a function. A function that
-                        causes
-                        a non-local state change is considered as its side effect.
-                    </p>
-                    <p>
-                        (It is okay if you don't fully understand the concept. But let me just try to put it another
-                        way. Remeber the idiom
-                        - "What happened in Vegas, stays in Vegas".
-                        So, here, Vegas is our local function scope. If what happened in Vegas, stayed in Vegas. We are
-                        fine - no side effects.
-                        Otherwise, we got ourselves some side effects.)
-                    </p>
+                        <h3 class="mt-3">The <em>useEffect</em>&nbsp;hook - managing side effects</h3>
 
-                    <h4>Common Side Effect</h4>
-                    <ul>
-                        <li>Logging to the console or elsewhere</li>
-                        <li>Accessing or setting browser's local storage</li>
-                        <li>Fetching data</li>
-                        <li>Setting up timer with setInterval or setTimeout</li>
-                        <li>Subcribing and unscribing to services</li>
-                        <li>Accessing or measuing values like browser or DOM elment's width, height</li>
-                    </ul>
-                    <p>
-                        This of course is not an exhaustive list. But they are the most common ones that I have used or
-                        encountered.
-                        If you are not sure if something is a side effect, first, think about our Vegas analogy.
-                        If still unsure, ask help from our best friend "Google".
-                    </p>
+                        <div class="sidenote">
+                            <h4>
+                                A little detour of Class Component LifeCycle methods
+                            </h4>
+                            <p>
+                                React class components use lifecycle methods to help trigger or perform certain actions
+                                at
+                                certain time.
+                                The certain times will be tied to the three phases of React lifecyclecy: Mounting(born),
+                                Update(grow), Unmount(die).
+                                To understand how it works, here are two pictures of the old and new React LifeCycle:
+                            </p>
+                            <img src="../img/blog/new_lifecycle.png" alt="React New LifeCycle Methods"
+                                style="width: 100%;">
+                            <img src="../img/blog/old_lifecycle.jpeg" alt="React Old LifeCycle Methods"
+                                style="width: 100%;">
+                        </div>
 
-                    <h4>How to use useEffect hook?</h4>
-                    <p>
-                        If you are already familiar with React LifeCycle methods, useEffect hook is like 3 methods
-                        combined:
-                        the componentDidMount, the the componentWillUnmount, the componentWillUpdate()
-                    </p>
-                    <p>
-                        If you don't know about those methods, you don't have to. Because useEffect hook will work
-                        the same and it is much easier to understand.
-                    </p>
-                    <pre><code>
+                        <p>Now, if you are screaming, shouting or cursing, it is totally normal. It will take quite some
+                            time
+                            and experience to understand all those methods - when to use them and how to use them.
+                            Even experienced developers may sometimes get confused and introduce bugs to the program.
+                        </p>
+                        <p>
+                            Lucky enough, we don't have to go through all these pain. (However, it will help you gain a
+                            deep
+                            understanding of React if you know the lifecycle of a React component.)
+                            Because in function component, it is much more straight-forward.
+                            Let us talk about the useEffect hook which as its name suggests is used to manage side
+                            effects.
+                        </p>
+
+                        <h4>What is Side Effect?</h4>
+                        <p>
+                            In the world of programming, a side effect is always related to a function. A function that
+                            causes
+                            a non-local state change is considered as its side effect.
+                        </p>
+                        <p>
+                            (It is okay if you don't fully understand the concept. But let me just try to put it another
+                            way. Remeber the idiom
+                            - "What happened in Vegas, stays in Vegas".
+                            So, here, Vegas is our local function scope. If what happened in Vegas, stayed in Vegas. We
+                            are
+                            fine - no side effects.
+                            Otherwise, we got ourselves some side effects.)
+                        </p>
+
+                        <h4>Common Side Effect</h4>
+                        <ul>
+                            <li>Logging to the console or elsewhere</li>
+                            <li>Accessing or setting browser's local storage</li>
+                            <li>Fetching data</li>
+                            <li>Setting up timer with setInterval or setTimeout</li>
+                            <li>Subcribing and unscribing to services</li>
+                            <li>Accessing or measuing values like browser or DOM elment's width, height</li>
+                        </ul>
+                        <p>
+                            This of course is not an exhaustive list. But they are the most common ones that I have used
+                            or
+                            encountered.
+                            If you are not sure if something is a side effect, first, think about our Vegas analogy.
+                            If still unsure, ask help from our best friend "Google".
+                        </p>
+
+                        <h4>How to use useEffect hook?</h4>
+                        <p>
+                            If you are already familiar with React LifeCycle methods, useEffect hook is like 3 methods
+                            combined:
+                            the componentDidMount, the the componentWillUnmount, the componentWillUpdate()
+                        </p>
+                        <p>
+                            If you don't know about those methods, you don't have to. Because useEffect hook will work
+                            the same and it is much easier to understand.
+                        </p>
+                        <pre><code>
 useEffect(() => {
     // perform effect
     return () => {/* clean up */}
 }, [dep1, dep2]);
                     </code></pre>
-                    <p>
-                        The above code snippet shows us how we can use the useEffect hook.
-                        We call the useEffect() function and pass in two parameters, which is the second is optional.
-                        The first parameter is a callback function. The second is a dependency list.
-                        Every time if a variable in the dependency list changes, React will execute our callback
-                        function.
-                        If we don't pass in a second parameter, the callback function will execute every time the
-                        component is rendered.
-                        Then, we can return a function which usually is some clean up code like unscribing, stop timer
-                        and etc.
-                        This function will be called by React before the component unmount.
-                    </p>
-                    <p>
-                        This leads to many possible scenarios how we can use the useEffect hook:
-                    </p>
-                    <ol>
-                        <li>We want to run an effect after every render</li>
-                        <pre><code>
+                        <p>
+                            The above code snippet shows us how we can use the useEffect hook.
+                            We call the useEffect() function and pass in two parameters, which is the second is
+                            optional.
+                            The first parameter is a callback function. The second is a dependency list.
+                            Every time if a variable in the dependency list changes, React will execute our callback
+                            function.
+                            If we don't pass in a second parameter, the callback function will execute every time the
+                            component is rendered.
+                            Then, we can return a function which usually is some clean up code like unscribing, stop
+                            timer
+                            and etc.
+                            This function will be called by React before the component unmount.
+                        </p>
+                        <p>
+                            This leads to many possible scenarios how we can use the useEffect hook:
+                        </p>
+                        <ol>
+                            <li>We want to run an effect after every render</li>
+                            <pre><code>
 useEffect(() => {
     // perform effect
 });
                     </code></pre>
-                        <li>We want to run an effect only once after the component</li>
-                        <pre><code>
+                            <li>We want to run an effect only once after the component</li>
+                            <pre><code>
 useEffect(() => {
     // perform effect
 }, []);
                     </code></pre>
-                        <li>
-                            We want to run an effect on variable changes:
-                        </li>
-                        <pre><code>
+                            <li>
+                                We want to run an effect on variable changes:
+                            </li>
+                            <pre><code>
 useEffect(() => {
     // perform effect
 }, [dep1, dep2]);
                     </code></pre>
-                        <li>
-                            We want to run the effects and clean up when the component unmounts:
-                        </li>
-                        <pre><code>
+                            <li>
+                                We want to run the effects and clean up when the component unmounts:
+                            </li>
+                            <pre><code>
 useEffect(() => {
     // perform effect
     return () => {/* clean up */}
 }, [dep1, dep2]);
                     </code></pre>
-                    </ol>
-                    <p>
-                        We will see some examples in my video demonstration.
-                    </p>
-
-
-                    <h3 class="mt-3">The <em>useRef</em>&nbsp;hook - managing state without re-rendering the UI</h3>
-                    <p>
-                        As I briefly mentioned in my first blog, in React, when dealing with form, we can choose between
-                        controlled component (recommended)
-                        and uncontrolled component.
-                        The difference between a controlled the two is whether the component keeps track of its own
-                        states.
-                        We create a uncontrolled component with the help of the useRef hook.
-                        Also, since the state is not managed by React but by ourselves, a re-render will not be
-                        triggered.
-                    </p>
-                    <p>
-                        Even though it is recommended that we use controlled component as much as possible,
-                        there will be cases when uncontrolled can be a better choice. For example, when we would like to
-                        persist values in the ref across renders. With power also comes with responsibility.
-                        So we must be careful when handling uncontrolled component.
-                    </p>
-
-                    <h4>How to use the useRef hook?</h4>
-                    <p>
-                        When we call the useRef function, we can think that we have generated a mark.
-                        Then we can place this mark on one of the DOM elements. With that, we have the power to access
-                        its state.
-                    </p>
-                    <pre><code>
-const myRef = useRef();
-return (
-    <button ref={myRef}>Click Me</button>
-) 
-                    </code></pre>
-
-                    <h3 class="mt-3"> Video Demonstration </h3>
-                    <iframe src="https://www.youtube.com/embed/60kqT_iEWR8" frameborder="0" width="560"
-                        height="310"></iframe>
-                    <p>
-                        If the embedded video is not working, please use the link below to watch it.
-                    </p>
-                    <a target="_blank"
-                        href="https://mysait-my.sharepoint.com/personal/xiaomeng_li_edu_sait_ca/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fxiaomeng%5Fli%5Fedu%5Fsait%5Fca%2FDocuments%2FRecordings%2FMeeting%20with%20Xiaomeng%20Li%2D20220615%5F152949%2DMeeting%20Recording%2Emp4&parent=%2Fpersonal%2Fxiaomeng%5Fli%5Fedu%5Fsait%5Fca%2FDocuments%2FRecordings&ga=1">
-                        Click here to watch the video
-                    </a>
-
-                    <h2 class="mt-3"> Conclusion </h2>
-                    <hr>
-
-                    <p>
-                        In this blog, we have introduced three more commonly used React hooks: useReducer, useEffect,
-                        and useRef.
-                        The useReducer hook helps us manage a group of related states; The useEffect hook helps us
-                        perform side effects.
-                        And the useRef hook can create uncontrolled component so we can manage the state by ourselves.
-                    </p>
-                    <p>
-                        This covers 80% on the basic of React hooks. There are still some performance hooks like the
-                        useMemo hook.
-                        However, it is hard to figure out when to or not to use them. If used incorrectly, you will even
-                        slow down the performance.
-                        Also, it is also recommended to avoid them as possible.
-                        In addition, you can create your custom hooks which you can check by yourself.
-                        I hope you all enjoyed reading this blog and gained more understanding on React hooks.
-                        With the knowledge, you could create very much all the basic web pages using React hooks.
-                        Keep coding and thanks all.
-                    </p>
-
-                    <h3 class="mt-3">
-                        Source Code
-                    </h3>
-                    <p><a href="https://github.com/NirvanaPhX/React-TodoList" target="_blank">
-                            https://github.com/NirvanaPhX/React-TodoList
-                        </a>
-                    </p>
-
-                    <h3 class="mt-3">
-                        Citations
-                    </h3>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://www.linkedin.com/learning/react-hooks/react-hooks-history?autoplay=true&u=2245281">LinkedIn
-                                Course - React Hooks by <a
-                                    href="https://www.linkedin.com/in/eveporcello/?trk=lil_instructor">Eve
-                                    Porcello</a></a>
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.linkedin.com/learning/react-design-patterns/take-your-react-skills-to-the-next-level?autoplay=true&u=2245281">
-                                LinkedIn Course - React: Design Patterns by <a
-                                    href="https://www.linkedin.com/in/shaun-wassell/?trk=lil_instructor">Shaun
-                                    Wassell</a>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://reactjs.org/docs/hooks-effect.html">React Offical Docs</a>
-                        </li>
-                    </ul>
-
-                </article>
-            </div>
-
-            <div class="col-md-4">
-                <div class="position-sticky" style="top: 2rem;">
-                    <div class="p-4 mb-3 bg-light rounded">
-                        <h4 class="fst-italic">About Me</h4>
-                        <p class="mb-2">
-                            I am a software developer student graduating in August.
-                            I am self-motivated and passionate about technology.
-                        <ul>
-                            <li>Language: Java, JavaScript </li>
-                            <li>Database: OracleSQL, MySQL, MongoDB, GraphQL</li>
-                            <li>Frameworks: ReactJS, NodeJS, ExpressJS</li>
-                        </ul>
-                        </p>
-                    </div>
-
-                    <div class="p-4">
-                        <h4 class="fst-italic">Contact Me</h4>
-                        <ol class="list-unstyled mb-0">
-                            <li class="h5"><a href="https://github.com/NirvanaPhX"><i
-                                        class="fa-brands fa-github"></i>&nbsp;Github</a>
-                            </li>
-                            <li class="h5"><a href="https://www.linkedin.com/in/xiaomeng-li-sd/"><i
-                                        class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a></li>
-                            <li class="h5"><a href="mailto: lixiaomengg@gmail.com"><i
-                                        class="fa-solid fa-envelope"></i>&nbsp;Email</a></li>
                         </ol>
+                        <p>
+                            We will see some examples in my video demonstration.
+                        </p>
+
+
+                        <h3 class="mt-3">The <em>useRef</em>&nbsp;hook - managing state without re-rendering the UI</h3>
+                        <p>
+                            As I briefly mentioned in my first blog, in React, when dealing with form, we can choose
+                            between
+                            controlled component (recommended)
+                            and uncontrolled component.
+                            The difference between a controlled the two is whether the component keeps track of its own
+                            states.
+                            We create a uncontrolled component with the help of the useRef hook.
+                            Also, since the state is not managed by React but by ourselves, a re-render will not be
+                            triggered.
+                        </p>
+                        <p>
+                            Even though it is recommended that we use controlled component as much as possible,
+                            there will be cases when uncontrolled can be a better choice. For example, when we would
+                            like to
+                            persist values in the ref across renders. With power also comes with responsibility.
+                            So we must be careful when handling uncontrolled component.
+                        </p>
+
+                        <h4>How to use the useRef hook?</h4>
+                        <p>
+                            When we call the useRef function, we can think that we have generated a mark.
+                            Then we can place this mark on one of the DOM elements. Since each node element has a "ref"
+                            attribute,
+                            this is where we want to put our mark. With that, we have the power to
+                            access its state by using the .current attribute of the ref object.
+                        </p>
+                        <p>
+                            One thing to notice is the ref object's current attribute actually return the node element
+                            itself.
+                            Therefore, we can access all the properties and methods of the element.
+                        </p>
+                        <p>
+                            We shouldn't abuse the use of useRef hook. It may introduce bugs because it won't trigger
+                            re-render when the state changes.
+                            It will also reduce the readability of our code. It may affect the performance of our app
+                            since React won't be able to optimize
+                            with unmanaged state.
+                        </p>
+
+
+                        <h3 class="mt-3"> Video Demonstration </h3>
+                        <iframe src="https://www.youtube.com/watch?v=1AUuht7H2j4" frameborder="0" width="560"
+                            height="310"></iframe>
+                        <p>
+                            If the embedded video is not working, please use the link below to watch it.
+                        </p>
+                        <a target="_blank" href="https://www.youtube.com/watch?v=1AUuht7H2j4">
+                            Click here to watch the video
+                        </a>
+
+                        <h2 class="mt-3"> Conclusion </h2>
+                        <hr>
+
+                        <p>
+                            In this blog, we have introduced three more commonly used React hooks: useReducer,
+                            useEffect,
+                            and useRef.
+                            The useReducer hook helps us manage a group of related states; The useEffect hook helps us
+                            perform side effects.
+                            And the useRef hook can create uncontrolled component so we can manage the state by
+                            ourselves.
+                        </p>
+                        <p>
+                            This covers 80% on the basic of React hooks. There are still some performance hooks like the
+                            useMemo hook.
+                            However, it is hard to figure out when to or not to use them. If used incorrectly, you will
+                            even
+                            slow down the performance.
+                            Also, it is also recommended to avoid them as possible.
+                            In addition, you can create your custom hooks which you can check by yourself.
+                            I hope you all enjoyed reading this blog and gained more understanding on React hooks.
+                            With the knowledge, you could create very much all the basic web pages using React hooks.
+                            Keep coding and thanks all.
+                        </p>
+
+                        <h3 class="mt-3">
+                            Source Code
+                        </h3>
+                        <p><a href="https://github.com/NirvanaPhX/React-TodoList" target="_blank">
+                                https://github.com/NirvanaPhX/React-TodoList
+                            </a>
+                        </p>
+
+                        <h3 class="mt-3">
+                            Citations
+                        </h3>
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/learning/react-hooks/react-hooks-history?autoplay=true&u=2245281">LinkedIn
+                                    Course - React Hooks by <a
+                                        href="https://www.linkedin.com/in/eveporcello/?trk=lil_instructor">Eve
+                                        Porcello</a></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/learning/react-design-patterns/take-your-react-skills-to-the-next-level?autoplay=true&u=2245281">
+                                    LinkedIn Course - React: Design Patterns by <a
+                                        href="https://www.linkedin.com/in/shaun-wassell/?trk=lil_instructor">Shaun
+                                        Wassell</a>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://reactjs.org/docs/hooks-effect.html">React Offical Docs</a>
+                            </li>
+                        </ul>
+
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 2rem;">
+                        <div class="p-4 mb-3 bg-light rounded">
+                            <h4 class="fst-italic">About Me</h4>
+                            <p class="mb-2">
+                                I am a software developer student graduating in August.
+                                I am self-motivated and passionate about technology.
+                            <ul>
+                                <li>Language: Java, JavaScript </li>
+                                <li>Database: OracleSQL, MySQL, MongoDB, GraphQL</li>
+                                <li>Frameworks: ReactJS, NodeJS, ExpressJS</li>
+                            </ul>
+                            </p>
+                        </div>
+
+                        <div class="p-4">
+                            <h4 class="fst-italic">Contact Me</h4>
+                            <ol class="list-unstyled mb-0">
+                                <li class="h5"><a href="https://github.com/NirvanaPhX"><i
+                                            class="fa-brands fa-github"></i>&nbsp;Github</a>
+                                </li>
+                                <li class="h5"><a href="https://www.linkedin.com/in/xiaomeng-li-sd/"><i
+                                            class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a></li>
+                                <li class="h5"><a href="mailto: lixiaomengg@gmail.com"><i
+                                            class="fa-solid fa-envelope"></i>&nbsp;Email</a></li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </main>
+        </main>
 
-    <footer class="blog-footer">
-        <p>Blog built using <a href="https://getbootstrap.com/">Bootstrap Template</a>.</p>
-        <p>
-            <a href="#">Back to top</a>
-        </p>
-    </footer>
-
+        <footer class="blog-footer">
+            <p>Blog built using <a href="https://getbootstrap.com/">Bootstrap Template</a>.</p>
+            <p>
+                <a href="#">Back to top</a>
+            </p>
+        </footer>
 
 
-</body>
 
-</html>
+    </body>
+
+    </html>
