@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li's Portfolio</title>
     <link rel="stylesheet" href="./css//style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -47,12 +49,11 @@
         </section>
 
         <section class="about">
-            <h1 class="about-title">
-                about me
-            </h1>
-
-            <div class="grid grid-col-2">
-                <img src="./img/myAvatar.svg" alt="Li's cartoon avatar">
+            <div class="about-content">
+                <!-- <img src="./img/myAvatar.svg" alt="Li's cartoon avatar"> -->
+                <div class="about-title">
+                    <h1>about <br /> <span class="text-primary-darker">me</span></h1>
+                </div>
                 <div class="about-detail">
                     <div class="about-detail-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="about-item-icon" fill="none" viewBox="0 0 24 24"
@@ -80,7 +81,7 @@
                                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                         </svg>
                         <h4>Self Motivated</h4>
-                        <p>I am a self-starter and keep working towrads my goal.</p>
+                        <p>I am a self-starter and keep working towards my goal.</p>
                     </div>
                     <div class="about-detail-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="about-item-icon" fill="none" viewBox="0 0 24 24"
@@ -91,6 +92,88 @@
                         <h4>Strong problem solving skills</h4>
                         <p>I like to think and solve problems.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill">
+            <div class="container center-text">
+                <span class="subheading">Skills</span>
+                <h2 class="heading-secondary">I believe in life long learning</h2>
+            </div>
+
+            <div class="container grid grid-col-2">
+                <div class="skill-desc">
+                    <h3>Current skill list: </h3>
+                    <ul class="skill-list">
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>Java</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>Python</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>HTML5 / CSS3</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>TypeScript</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>React</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>Node</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>Express</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>MongoDB</span>
+                        </li>
+                        <li class="skill-list-item">
+                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                            <span>MySQL</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="icons-gallery">
+                    <figure class="gallery-item">
+                        <img src="./img/icons/java.png" alt="Logo of the Java programming language">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/python.png" alt="Logo of the Python programming language">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/javascript.png" alt="Logo of the JavaScript programming language">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/nodejs.png" alt="Logo of the NodeJS framework">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/mongodb.png" alt="Logo of the MongoDB Database">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/mysql.png" alt="Logo of the MYSQL Database">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/react.png" alt="Logo of the ReactJS framework">
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="./img/icons/" alt="Logo of the Java programming language">
+                    </figure>
                 </div>
             </div>
         </section>
