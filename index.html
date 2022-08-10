@@ -7,17 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li's Portfolio</title>
     <link rel="stylesheet" href="./css//style.css">
+    <link rel="stylesheet" href="./css//responsive.css">
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="./js/script.js"></script>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <img src="./img/XLlogo.png" class="logo" alt="Li's personal logo">
         <nav>
             <ul class="nav-list">
                 <li><a href="#about" class="nav-link">about</a></li>
-                <li><a href="#about" class="nav-link">skill</a></li>
+                <li><a href="#skill" class="nav-link">skill</a></li>
                 <li><a href="#project" class="nav-link">project</a></li>
                 <li><a href="#contact" class="nav-link nav-link-cta">hire me</a></li>
             </ul>
@@ -42,13 +44,13 @@
                     to
                     pursue my dream.
                 </p>
-                <a href="#contact" class="btn btn-filled btn-cta">Hire me</a>
-                <a href="#contact" class="btn btn-outline">Know more</a>
+                <a href="#contact" class="btn btn-md btn-filled btn-cta">Hire me</a>
+                <a href="#about" class="btn btn-md btn-outline">Know more</a>
             </div>
             <img src="./img/laptop.svg" class="side-img" alt="A photo of a computer">
         </section>
 
-        <section class="about">
+        <section class="about section-hidden" id="about">
             <div class="about-content">
                 <!-- <img src="./img/myAvatar.svg" alt="Li's cartoon avatar"> -->
                 <div class="about-title">
@@ -96,67 +98,13 @@
             </div>
         </section>
 
-        <section class="skill">
+        <section class="skill section-hidden" id="skill">
             <div class="container center-text">
                 <span class="subheading">Skills</span>
-                <h2 class="heading-secondary">I believe in life long learning</h2>
+                <h2 class="heading-secondary">A list of my technical skills</h2>
             </div>
 
-            <div class="container grid grid-col-2">
-                <div class="skill-desc">
-                    <h3>Current skill list: </h3>
-                    <ul class="skill-list">
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>Java</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>Python</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>HTML5 / CSS3</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>JavaScript</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>TypeScript</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>React</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>Node</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>Express</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>MongoDB</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>MySQL</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>AWS</span>
-                        </li>
-                        <li class="skill-list-item">
-                            <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                            <span>Linux</span>
-                        </li>
-                    </ul>
-                </div>
-
+            <div class="container-lg grid grid-col1-col2">
                 <div class="icons-gallery">
                     <figure class="gallery-item  grid-x-span-2">
                         <img src="./img/icons/java.png" alt="Logo of the Java programming language">
@@ -195,16 +143,191 @@
                         <img src="./img/icons/git.png" alt="Logo of Git">
                     </figure>
                 </div>
+                <div class="skill-desc grid grid-col-2">
+                    <div class="skill-card">
+                        <h3>Languages: </h3>
+                        <ul class="skill-list">
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Java</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Python</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>JavaScript</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>TypeScript</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Framework: </h3>
+                        <ul class="skill-list">
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>React</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Node</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Express</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Database: </h3>
+                        <ul class="skill-list">
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Oracle</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>MySQL</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>MongoDB</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Others: </h3>
+                        <ul class="skill-list">
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>HTML5/CSS3</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>AWS</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Linux</span>
+                            </li>
+                            <li class="skill-list-item">
+                                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                                <span>Git</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="project">
+        <section class="project section-hidden" id="project">
             <div class="container">
                 <span class="subheading">Projects</span>
-                <h2 class="heading-secondary">The best way to learn programming</h2>
+                <h2 class="heading-secondary">A showcase of my previous work</h2>
             </div>
+
+            <div class="container grid grid-col-2">
+                <!-- Project 1 -->
+                <div class="project-content">
+                    <p class="project-number">01</p>
+                    <h3 class="project-title heading-tertiary">Dev World</h3>
+                    <p class="project-desc">
+                        A social media web application for developers to connect to each other. Users can sign up, log
+                        in,
+                        and create and share their profiles. Also, users can create their own posts or comment
+                        on others' posts.
+                    </p>
+                    <ul class="tech-stack-tag-list">
+                        <li class="tech-stack-tag">React & Redux</li>
+                        <li class="tech-stack-tag">Node</li>
+                        <li class="tech-stack-tag">Express</li>
+                        <li class="tech-stack-tag">MongoDB</li>
+                        <li class="tech-stack-tag">Heroku</li>
+                    </ul>
+                </div>
+                <div class="project-img-box">
+                    <img src="./img/project-devworld.png" alt="">
+                    <a href="#" class="btn btn-sm btn-filled">Live Demo</a>
+                    <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-img-box">
+                    <img src="./img/project-devworld.png" alt="">
+                    <a href="#" class="btn btn-sm btn-filled">Live Demo</a>
+                    <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+                </div>
+                <div class="project-content">
+                    <p class="project-number">02</p>
+                    <h3 class="project-title heading-tertiary">SAIT Capstone</h3>
+                    <p class="project-desc">
+                        A volunteer and task management system to track volunteers' working hours
+                        , generating necessary reports. Privilleged users at administration and management
+                        level will be able to upload documents, manage users and tasks.
+                    </p>
+                    <ul class="tech-stack-tag-list">
+                        <li class="tech-stack-tag">React & Redux</li>
+                        <li class="tech-stack-tag">Node</li>
+                        <li class="tech-stack-tag">Express</li>
+                        <li class="tech-stack-tag">MongoDB</li>
+                        <li class="tech-stack-tag">Heroku</li>
+                    </ul>
+                </div>
+
+
+                <!-- Project 3 -->
+                <div class="project-content">
+                    <p class="project-number">03</p>
+                    <h3 class="project-title heading-tertiary">Currency Converter</h3>
+                    <p class="project-desc">
+                        A simple web app allows users to convert between the listed currencies in real time. The
+                        conversion rate is obtained
+                        from a third-party API and is updated every hour.
+                    </p>
+                    <ul class="tech-stack-tag-list">
+                        <li class="tech-stack-tag">HTML/CSS</li>
+                        <li class="tech-stack-tag">JavaScript</li>
+                        <li class="tech-stack-tag">JQuery</li>
+                    </ul>
+                </div>
+                <div class="project-img-box">
+                    <img src="./img/project-currency.png" alt="">
+                    <a href="#" class="btn btn-sm btn-filled">Live Demo</a>
+                    <a href="#" class="btn btn-sm btn-outline">Source Code</a>
+                </div>
         </section>
+
+
     </main>
+
+    <footer>
+        <h3 class="copyright">
+            Copyright &copy; 2022 Designed and developed by Li.
+        </h3>
+
+        <ul class="social-links">
+            <li>
+                <a class="footer-link" href="#">
+                    <ion-icon class="social-icon" name="logo-github"></ion-icon>
+                </a>
+            </li>
+
+            <li>
+                <a class="footer-link" href="#">
+                    <ion-icon class="social-icon" name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a class="footer-link" href="#">
+                    <ion-icon class="social-icon" name="mail-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+    </footer>
 </body>
 
 </html>
