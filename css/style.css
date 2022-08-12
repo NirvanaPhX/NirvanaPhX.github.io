@@ -172,8 +172,19 @@ body {
 }
 
 .section-hidden {
-  transform: translateY(10rem);
   opacity: 0;
+}
+
+.go-in-from-bottom {
+  transform: translateY(10rem);
+}
+
+.go-in-from-right {
+  transform: translateX(15rem);
+}
+
+.go-in-from-left {
+  transform: translateX(-15rem);
 }
 
 /****************** General End ******************/ 

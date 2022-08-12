@@ -57,12 +57,12 @@ const observe = new IntersectionObserver(
 observe.observe(heroSectionEl);
 
 // Reveal Sections on scroll
-const allSections = document.querySelectorAll(".section-hidden");
+const hiddenSections = document.querySelectorAll(".section-hidden");
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.1,
+  threshold: 0.2,
 });
-allSections.forEach((section) => {
+hiddenSections.forEach((section) => {
   sectionObserver.observe(section);
 });
 
@@ -72,6 +72,9 @@ function revealSection(entries, observer) {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove("section-hidden");
+  entry.target.classList.remove("go-in-from-bottom");
+  entry.target.classList.remove("go-in-from-right");
+  entry.target.classList.remove("go-in-from-left");
   observer.unobserve(entry.target);
 }
 
