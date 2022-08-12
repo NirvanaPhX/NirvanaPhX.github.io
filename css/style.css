@@ -22,11 +22,13 @@ ul, li {
 /******************** General ********************/ 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
   color: #212529;
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -75,13 +77,13 @@ body {
 }
 
 .container {
-  width: 120rem;
+  max-width: 120rem;
   padding: 0 3.2rem;
   margin: 0 auto;
 }
 
 .container-lg {
-  width: 144rem;
+  max-width: 144rem;
   margin: 0 auto;
   padding: 0 3.2rem;
 }
@@ -177,12 +179,13 @@ body {
 /****************** General End ******************/ 
 
 /********************** Nav **********************/ 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 6.4rem;
   height: 7.2rem;
+  position: relative;
 }
 
 .logo {
@@ -315,8 +318,21 @@ header {
   color: #212529;
 }
 
+.about-detail-item {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+
+  transition: all .8s;
+}
+
 .about-detail-item:nth-child(2) {
   transform: translateX(3.6rem);
+}
+
+.about-detail-item:nth-child(n+1):hover {
+  transform: translateX(0);
 }
 
 .about-detail-item:nth-child(3) {
@@ -325,13 +341,6 @@ header {
 
 .about-detail-item:nth-child(4) {
   transform: translateX(10.8rem);
-}
-
-.about-detail-item {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
 }
 
 .about-detail-item h4 {
@@ -359,8 +368,7 @@ header {
 
 /******************** Skill start ********************/
 .skill {
-  margin-top: 5.2rem;
-  padding: 0 7.2rem 6.4rem 3.2rem;
+  padding: 5.2rem 7.2rem 6.4rem 3.2rem;
   overflow: hidden;
   transition: transform 1s, opacity 1s;
 }
@@ -416,7 +424,7 @@ header {
 
 /******************** Project start ********************/
 .project {
-  margin-top: 3.2rem;
+  padding: 6.4rem 0;
   overflow: hidden;
   transition: transform 1s, opacity 1s;
 }

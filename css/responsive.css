@@ -28,7 +28,7 @@
 /** Below 1464px **/
 @media (max-width: 91em) {
     .skill-desc {
-        width: 80rem;
+        max-width: 80rem;
         column-gap: 0;
     }
 }
@@ -45,7 +45,7 @@
     } 
 
     .skill-desc {
-        width: 64rem;
+        max-width: 64rem;
         column-gap: 0;
     }
 }
@@ -55,6 +55,7 @@
     html {
         font-size: 56.25%;
     }
+
 }
 
 /** Below 1156px **/
@@ -85,7 +86,6 @@
 
     .hero img {
         transform: translateY(-12rem);
-        height: 80%;
     }
 
     .about-title {
@@ -126,11 +126,19 @@
     .grid {
         padding: 0 10.8rem;
     }
+    
+    .project-img-box:nth-child(2) {
+        grid-row: 1;
+    }
+
+    .project-img-box:nth-child(6) {
+        grid-row: 5;
+    }
 
   /* MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
-    z-index: 9999;
+    z-index: 99999;
   }
 
   .top-nav {
@@ -182,5 +190,110 @@
 
 /** Below 772px **/
 @media (max-width: 49em) {
+    .hero img {
+        transform: translateY(-10rem);
+    }
+
+   .about-content {
+    flex-direction: column;
+   } 
+
+   .about-title {
+    flex: 0 0 25rem;
+   }
+
+   .about-title h1 br {
+    display: none;
+   }
+
+   .grid-col1-col2 {
+    grid-template-columns: 1fr;
+   }
+
+   .skill-desc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: none;
+   }
+
+   .grid {
+    padding: 4.8rem;
+    row-gap: 2.4rem;
+   }
+}
+
+/* BELOW 544px (Phones) */
+@media (max-width: 34em) {
+    .heading-seconary{
+        margin-bottom: 3.2rem;
+    }
+
+    .heading-tertiary {
+        margin-bottom: 1.2rem;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+      padding: 2.4rem 1.6rem;
+    }
+
+    .btn-sm,
+    .btn:link,
+    .btn:visited {
+        font-size: 2rem;
+    }
+
+    .grid {
+        padding: 0;
+        row-gap: 0;
+    }
+
+    .hero {
+        padding: 0 2.4rem;
+        text-align: center;
+    }
+
+    .hero img {
+        transform: translateY(-4rem);
+    }
+
+    .about {
+        padding: 0 0 9.6rem 0;
+    }
+
+    .about-title {
+        flex: 1 1 20rem;
+    }
+
+    .skill {
+        padding: 5.2rem 1.2rem 2.4rem 1.2rem;
+    }
     
+    .project {
+        padding: 6.4rem 1.2rem 0 1.2rem;
+    }
+
+    .project-number {
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .project-content {
+        margin-bottom: 2.4rem;
+    }
+
+    footer {
+        padding-top: 2.4rem;
+    }
+
+    footer h3 {
+        font-size: 2rem;
+    }
+
+    .social-icon {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
 }
