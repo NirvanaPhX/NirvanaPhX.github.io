@@ -26,12 +26,17 @@ allLinks.forEach(function (link) {
     // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
+      sectionEl.scrollIntoView({
+        behavior: "smooth",
+      });
     }
 
     // Close mobile naviagtion
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
+
+    // Navigate to new page if it is a link
+    if (!href.startsWith("#")) window.open(href, "_blank");
   });
 });
 

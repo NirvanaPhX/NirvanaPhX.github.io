@@ -293,7 +293,7 @@ body {
 
 /******************** About ********************/ 
 .about {
-  padding: 7.2rem 9.6rem 6.4rem 0;
+  padding: 3.2rem 9.6rem 6.4rem 0;
   background: rgb(219,226,253);
   background: linear-gradient(330deg, rgba(219,226,253,1) 0%, rgba(76,110,245,1) 86%); 
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
@@ -379,7 +379,7 @@ body {
 
 /******************** Skill start ********************/
 .skill {
-  padding: 7.2rem 7.2rem 6.4rem 3.2rem;
+  padding: 5.2rem 7.2rem 6.4rem 3.2rem;
   overflow: hidden;
   transition: transform 1s, opacity 1s;
 }
@@ -435,7 +435,7 @@ body {
 
 /******************** Project start ********************/
 .project {
-  padding: 7.2rem 0;
+  padding: 6.4rem 0;
   overflow: hidden;
   transition: transform 1s, opacity 1s;
 }
