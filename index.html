@@ -5,241 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Li's Portfolio Website</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="./js/index.js"></script>
-</head>
-
-<body>
-    <!-------------------------- Header ---------------------------->
-    <header>
-        <div class="header header_origin">
-            <div class="name-icon">
-                <div class="X">X</div>
-                <div class="L">L</div>
-            </div>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="#about" class="nav_link">.ATTRIBUTE</a></li>
-                    <li><a href="#skill" class="nav_link">.SKILL</a></li>
-                    <li><a href="#project" class="nav_link">.PROJECT</a></li>
-                    <li><a href="#contact" class="nav_link">.CONTACT</a></li>
-                    <li><a href="./blogs/blog1.html" class="nav_link">.BLOG</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!------------------------ Top Section -------------------------->
-    <section class="container top">
-        <div class="flex-container">
-            <div class="text-left">
-                <h1>Hello,</h1>
-                <h1>It's</h1>
-                <h1>Li</h1>
-            </div>
-            <div class="image-container text-right">
-                <img src="./img/stars.jpg" alt="stars">
-            </div>
-        </div>
-        <h2>
-            <span id="typewriter-text"
-                data-text='["A Fullstack Developer", "A Tech Enthusiast", "A Food Lover"]'></span>
-            <span class="cursor"></span>
-        </h2>
-    </section>
-
-    <!------------------------ About Section ------------------------>
-    <section class="About section-hidden" id="about">
-        <div class="container">
-            <div class="title">
-                <h1><span>Li</span><span>.</span>attribute</h1>
-            </div>
-
-            <div class="soft-skill">
-                <div class="decoration">
-                    <i class="fa-solid fa-quote-left"></i>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-code"></i>
-                    <p>Passionate about technology</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-book-open"></i>
-                    <p>Eager to learn</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-user-ninja"></i>
-                    <p>Self Motivated</p>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-brain"></i>
-                    <p>Strong problem solving skills</p>
-                </div>
-                <div class="decoration right">
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <!------------------------ Skill Section ------------------------>
-    <section class="Skill section-hidden" id="skill">
-        <div class="container">
-            <aside>
-                <span>Li.skills</span>
-            </aside>
-
-            <div class="skill-row">
-                <h1>Languages<span>/</span></h1>
-                <div class="languages">
-                    <figure class="language-icons">
-                        <img src="./img/icons/java(color).png" alt="Java logo">
-                        <figcaption>Java</figcaption>
-                    </figure>
-                    <figure class="language-icons">
-                        <img src="./img/icons/js.png" alt="JavaScript logo">
-                        <figcaption>JavaScript</figcaption>
-                    </figure>
-                    <figure class="language-icons">
-                        <img src="./img/icons/typescript.png" alt="typescript logo">
-                        <figcaption>TypeScript</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="skill-row">
-                <h1>Database <span>/</span> </h1>
-                <div class="languages">
-                    <figure class="language-icons">
-                        <img src="./img/icons/oracle(color).png" alt="Oracle logo">
-                        <figcaption>Oracle PL/SQL</figcaption>
-                    </figure>
-                    <figure class="language-icons">
-                        <img src="./img/icons/mysql(color).png" alt="MySQL logo">
-                        <figcaption>MySQl</figcaption>
-                    </figure>
-                    <figure class="language-icons">
-                        <img src="./img/icons/mongodb-144.png" alt="MongoDB logo">
-                        <figcaption>MongoDB</figcaption>
-                    </figure>
-                </div>
-            </div>
-
-            <div class="skill-row">
-                <h1>Frameworks <span>/</span></h1>
-                <div class="languages">
-                    <figure class="language-icons">
-                        <img src="./img/icons/react.png" alt="Oracle logo">
-                        <figcaption>ReactJS</figcaption>
-                    </figure>
-                    <figure class="language-icons">
-                        <img src="./img/icons/nodejs-144.png" alt="MySQL logo">
-                        <figcaption>NodeJS</figcaption>
-                    </figure>
-                    <figure class="language-icons">
-                        <img src="./img/icons/icons8-django-144.png" alt="MongoDB logo">
-                        <figcaption>Django</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!---------------------- Project Section ------------------------>
-    <section class="Project container section-hidden" id="project">
-        <div class="project-col">
-            <h1>Li<span>.</span></h1>
-            <h1>Project</h1>
-
-            <div class="item">
-                <div class="item-front">
-                    <h2>Dev World</h2>
-                    <img src="./img/project-devworld.png" alt="An image for the project Car Rental Website">
-                </div>
-                <div class="item-back">
-                    <p>
-                        This is a social media app for developers to connect to each other.
-                        Users can sign up, log in, and each have their own profile which will be shared.
-                        Also, users can create posts and comment on others' posts.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://secret-stream-72025.herokuapp.com/" target="_blank">Demo</a>
-                        <a href="https://github.com/NirvanaPhX/SocialMediaApp" target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="more">
-                <h2>More</h2>
-                <h2>Coming...</h2>
-            </div>
-        </div>
-
-
-        <div class="project-col">
-            <div class="item">
-                <div class="item-front">
-                    <h2>Spacestagram</h2>
-                    <img src="./img/project-space.jpg" alt="An image for the project Spacestagram">
-                </div>
-                <div class="item-back">
-                    <p>
-                        A React project that display photos from NASA MARS Rover.
-                        Users can like the photos and share them with friends.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://nirvanaphx.github.io/spacetagram/" target="_blank">Demo</a>
-                        <a href="https://github.com/NirvanaPhX/spacetagram" target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="item-front">
-                    <h2>Currency Converter</h2>
-                    <img src="./img/project-currency.jpg" alt="An image for the project Currency Converter">
-                </div>
-                <div class="item-back">
-                    <p>
-                        This app allows users to convert between the listed currencies.
-                        The conversion rate is obtained every hour from a third-party API.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://nirvanaphx.github.io/projects/currencyconverter/index.html"
-                            target="_blank">Demo</a>
-                        <a href="https://github.com/NirvanaPhX/NirvanaPhX.github.io/tree/main/projects/currencyconverter"
-                            target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <div class="item-front">
-                    <h2>Car Rental Website</h2>
-                    <img src="./img/project-car.jpg" alt="An image for the project Car Rental Website">
-                </div>
-                <div class="item-back">
-                    <p>
-                        This app allows users to search for clients from a JSON file, display the client's
-                        information.
-                        Then, it will calculate the total rental fees based on selections.
-                    </p>
-                    <div class="button-group">
-                        <a href="https://nirvanaphx.github.io/projects/rentalcar/index.html" target="_blank">Demo</a>
-                        <a href="https://github.com/NirvanaPhX/NirvanaPhX.github.io/blob/main/projects/rentalcar/index.html"
-                            target="_blank">Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-=======
     <title>Li's Portfolio</title>
     <link rel="stylesheet" href="./css//style.css">
     <link rel="stylesheet" href="./css//responsive.css">
@@ -520,7 +285,6 @@
                     </ul>
                 </div>
 
->>>>>>> newversion
 
                 <!-- Project 3 -->
                 <div class="project-content">
@@ -548,9 +312,6 @@
     </main>
 
     <footer>
-<<<<<<< HEAD
-        <span>Designed and developed by Li &#169; 2022</span>
-=======
         <h3 class="copyright">
             Copyright &copy; 2022 Designed and developed by Li.
         </h3>
@@ -573,7 +334,6 @@
                 </a>
             </li>
         </ul>
->>>>>>> newversion
     </footer>
 </body>
 
